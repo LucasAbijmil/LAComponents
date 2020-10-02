@@ -1,5 +1,8 @@
-import XCTest
+//
+//
+//  Copyright (c) 2020 Lucas Abijmil.
 
+import XCTest
 import LAComponentsTests
 
 var tests = [XCTestCaseEntry]()

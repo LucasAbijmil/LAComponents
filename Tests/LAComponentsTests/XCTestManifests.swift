@@ -1,3 +1,7 @@
+//
+//
+//  Copyright (c) 2020 Lucas Abijmil.
+
 import XCTest
 
 #if !canImport(ObjectiveC)
