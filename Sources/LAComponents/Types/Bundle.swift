@@ -7,11 +7,15 @@ import Foundation
 public extension Bundle {
 
   /// Return the current release version.
+  ///
+  /// • Bundle.releaseVersion : 1.0
   static var releaseVersion: String? {
     return main.infoDictionary?["CFBundleShortVersionString"] as? String
   }
 
   /// Return the current build version.
+  ///
+  /// • Bundle.buildVersion : 1
   static var buildVersion: String? {
     return main.infoDictionary?["CFBundleVersion"] as? String
   }

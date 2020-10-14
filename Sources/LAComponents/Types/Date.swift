@@ -6,7 +6,13 @@ import Foundation
 
 public extension Date {
 
-  /// Convert a *Date* to a *String* in the format you provide.
+  /// Convert a ``Date`` to a ``String`` in the format you provide.
+  ///
+  /// • date = Date(timeIntervalSince1970: 1602280800)
+  ///
+  /// • format = "MM/dd/yyyy"
+  ///
+  /// • date.toString(format: format) –> "10/10/2020"
   ///
   /// Take a look there : https://nsdateformatter.com/
   ///

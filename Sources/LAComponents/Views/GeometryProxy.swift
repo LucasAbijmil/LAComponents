@@ -4,25 +4,25 @@
 
 import SwiftUI
 
-extension GeometryProxy {
+public extension GeometryProxy {
 
-  /// A handy contraction of *size.width*.
-  public var width: CGFloat {
+  /// A handy contraction of ``size.width``.
+  var width: CGFloat {
     return size.width
   }
 
-  /// A handy contraction of *size.height*.
-  public var height: CGFloat {
+  /// A handy contraction of ``size.height``.
+  var height: CGFloat {
     return size.height
   }
 
-  /// A handy contraction of *safeAreaInsets.top*.
-  public var safeTop: CGFloat {
+  /// A handy contraction of ``safeAreaInsets.top``.
+  var safeTop: CGFloat {
     return safeAreaInsets.top
   }
 
-  /// A handy contraction of *safeAreaInsets.bottom*.
-  public var safeBottom: CGFloat {
+  /// A handy contraction of ``safeAreaInsets.bottom``.
+  var safeBottom: CGFloat {
     return safeAreaInsets.bottom
   }
 }

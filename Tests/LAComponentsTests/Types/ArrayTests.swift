@@ -14,7 +14,21 @@ final class ArrayTests: XCTestCase {
   override class func tearDown() {
     super.tearDown()
   }
+  // MARK: - Tests Array
+  func testPrepend() {
+    let expectation = self.expectation(description: "prependOk")
 
+    var array = [1, 2, 3, 4, 5]
+    let expectedResult = [0, 1, 2, 3, 4, 5]
+
+    array.prepend(0)
+    XCTAssertEqual(array, expectedResult)
+
+    expectation.fulfill()
+    wait(for: [expectation], timeout: 5)
+  }
+
+  // MARK: - Tests Array where Element: Equatable
   func testRemoveDuplicate() {
     let expectation = self.expectation(description: "removeDuplicateOk")
 

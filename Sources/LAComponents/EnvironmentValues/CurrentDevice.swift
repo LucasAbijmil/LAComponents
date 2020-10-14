@@ -17,7 +17,8 @@ public struct CurrentDevice {
   /// A value that indicates if the current iOS device is an iPad.
   public var isIpad: Bool { type == .iPad }
 
-  enum EnvironmentKey: SwiftUI.EnvironmentKey {
+  fileprivate enum EnvironmentKey: SwiftUI.EnvironmentKey {
+    
     /// Add this structure to the EnvironmentKey.
     static let defaultValue = CurrentDevice()
   }
@@ -40,7 +41,7 @@ public struct CurrentDevice {
 //@available(watchOS, unavailable)
 public extension EnvironmentValues {
 
-  /// An Environment Value that returns the current iOS device.
+  /// An ``EnvironmentValue`` that returns the current iOS device.
   var currentDevice: CurrentDevice {
     get {
       self[CurrentDevice.EnvironmentKey.self]

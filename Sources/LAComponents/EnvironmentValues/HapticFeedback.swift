@@ -34,7 +34,7 @@ public struct HapticFeedback {
     hapticNotification.notificationOccurred(notification)
   }
 
-  enum EnvironmentKey: SwiftUI.EnvironmentKey {
+  fileprivate enum EnvironmentKey: SwiftUI.EnvironmentKey {
 
     /// Add this structure to the EnvironmentKey.
     static let defaultValue = HapticFeedback()
@@ -43,7 +43,7 @@ public struct HapticFeedback {
 
 public extension EnvironmentValues {
 
-  /// An Environment Value that allows 3 types of haptic feedback : impact, selection or notification.
+  /// An ``EnvironmentValue`` that allows 3 types of haptic feedback : impact, selection or notification.
   var hapticFeedback: HapticFeedback {
     get {
       self[HapticFeedback.EnvironmentKey.self]

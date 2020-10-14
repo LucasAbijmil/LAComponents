@@ -15,6 +15,18 @@ final class StringTest: XCTestCase {
     super.tearDown()
   }
 
+  func testTrimmed() {
+    let expectation = self.expectation(description: "trimedOk")
+
+    let string = "\n     Hello world     \n"
+    let expectedResult = "Hello world"
+
+    XCTAssertEqual(string.trimmed, expectedResult)
+
+    expectation.fulfill()
+    wait(for: [expectation], timeout: 5)
+  }
+
   func testToDate() {
     let expectation = self.expectation(description: "toDateOk")
 

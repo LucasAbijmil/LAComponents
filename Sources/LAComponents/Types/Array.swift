@@ -4,11 +4,28 @@
 
 import Foundation
 
+public extension Array {
+
+  /// Insert an ``Element`` at the beginning of the given ``Array``.
+  ///
+  /// The ``Array`` must be a variable :
+  ///
+  /// • [1, 2, 3, 4, 5].prepend(0) –> [0, 1, 2, 3, 4, 5]
+  ///
+  /// - Parameters:
+  ///     - element: The element whose to be inserted.
+  mutating func prepend(_ element: Element) {
+    insert(element, at: 0)
+  }
+}
+
 public extension Array where Element: Equatable {
 
-  /// Delete all duplicate elements in a given array.
+  /// Delete all duplicate elements in a given ``Array``.
   ///
-  /// The array must be a variable.
+  /// The ``Array`` must be a variable :
+  ///
+  /// • [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5].removeDuplicate() –> [1, 2, 3, 4, 5]
   mutating func removeDuplicate() -> [Element] {
     self = reduce(into: [Element]()) {
       if !$0.contains($1) { $0.append($1) }
@@ -17,9 +34,11 @@ public extension Array where Element: Equatable {
     return self
   }
 
-  /// Delete all occurrences of an element in a given array.
+  /// Delete all occurrences of an ``Element`` in a given ``Array``.
   ///
-  /// The array must be a variable.
+  /// The ``Array`` must be a variable :
+  ///
+  /// • [1, 2, 3, 4, 5, 5, 5, 5, 5].removeAll(5) –> [1, 2, 3, 4]
   ///
   /// - Parameters:
   ///     - item: The element whose occurrences must be removed.
@@ -28,9 +47,11 @@ public extension Array where Element: Equatable {
     return self
   }
 
-  /// Delete all occurrences of the elements in the array passed as parameters.
+  /// Delete all occurrences of the elements in the ``Array`` passed as parameters.
   ///
-  /// The array must be a variable.
+  /// The ``Array`` must be a variable :
+  ///
+  /// • [1, 2, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5].removeAll([4, 5]) –> [1, 2, 3]
   ///
   /// - Parameters:
   ///     - items: The elements whose occurrences must be removed.
