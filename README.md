@@ -8,12 +8,8 @@ The preferred way of installing LAComponents is via the Swift Package Manager (S
 
 1. In Xcode, open your project and navigate to File → Swift Packages → Add Package Dependency...
 2. Paste the repository URL (`https://github.com/LucasAbijmil/LAComponents`) and click Next.
-3. For Rules, select Branch (with branch set to `main`).
+3. For Rules, select `Version`.
 4. Click Finish.
-
-## Example 
-
-(in commng)
 
 
 ## EnvironmentValues 
@@ -67,7 +63,7 @@ The preferred way of installing LAComponents is via the Swift Package Manager (S
   ## Views
 
   - `dismissKeyboard()`: Hide the keyboard by sending the action to the shared application.
-  - `GeometryProxy` : Properties renaming
+  - `GeometryProxy` : Properties renaming.
       - `width` : size.width
       - `height` : size.height
       - `safeTop` : safeAreaInsets.top
