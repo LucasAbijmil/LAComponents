@@ -31,6 +31,8 @@ The preferred way of installing LAComponents is via the Swift Package Manager (S
   - `removeDuplicate() -> [Element]` : Delete all duplicate elements in a given Array.
   - `removeAll(_ item: Element) -> [Element]` :  Delete all occurrences of an Element in a given Array.
   - `removeAll(_ items: [Element]) -> [Element]` : Delete all occurrences of the elements in the Array passed as parameters.
+- `Binding` :
+  - `onChange(_ completion: @escaping (Value) -> Void) -> Binding<Value>` : A method equivalent to onChange(of: perform:) but which can be attached to the Binding itself.
 - `Bundle` : 
   - `releaseVersion` : Return the current release version.
   - `buildVersion` : Return the current build version.

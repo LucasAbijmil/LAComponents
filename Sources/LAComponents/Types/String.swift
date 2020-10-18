@@ -24,7 +24,7 @@ public extension String {
   /// Take a look there : https://nsdateformatter.com/
   ///
   /// - Parameters:
-  ///     - format: Format in which you want to convert a *String* to a *Date*.
+  ///     - format: Format in which you want to convert a ``String`` to a `Date``.
   func toDate(format: String) -> Date? {
     let df = DateFormatter()
     df.dateFormat = format
