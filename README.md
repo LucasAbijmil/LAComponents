@@ -11,6 +11,8 @@ The preferred way of installing LAComponents is via the Swift Package Manager (S
 3. For Rules, select `Version`.
 4. Click Finish.
 
+## Example 
+You will find a sample project at the following repository : [LAComponentsExample](https://github.com/LucasAbijmil/LAComponentsExample) (watchOS comming soon)
 
 ## EnvironmentValues 
 
