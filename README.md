@@ -20,13 +20,29 @@ You will find a sample project at the following repository : [LAComponentsExampl
 - `@Environment(\.hapticFeedback)` : An EnvironmentValue that allows 3 types of haptic feedback : impact, selection or notification.
 
 
+## Shape : 
+
+- `Capsule` :
+  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Capsule.
+- `Circle` : 
+  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Circle.
+- `ContainerRelativeShape` : 
+  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a ContainerRelativeShape. 
+- `Ellipse` : 
+  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Ellipse.
+- `Rectangle` : 
+  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Rectangle.
+- `RoundedRectangle` :
+  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a RoundedRectangle.
+  
+  
 ## Struct for style modifiers 
 
 - `ToggleStyle` :
   - `CheckBoxToggleStyle(frame: CGFloat, on colorOn: Color, off colorOff: Color)` : A ToggleStyle that displays a checkbox.
 
 
-## Types
+## Swift Types
 
 - `Array` : 
   - `prepend(_ element: Element)` : Insert an Element at the beginning of the given Array.
