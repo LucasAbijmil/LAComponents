@@ -6,7 +6,7 @@ import SwiftUI
 
 public extension Capsule {
 
-  /// Fills the entire edge within a ``Capsule``. If you define a size to the ``Capsule``, it won't increase its frame.
+  /// Fills the background of the ``Capsule`` and strokes it from the inside. Therefore if you define a size to the ``Capsule``, it won't increase its frame even if you increase the line width.
   ///
   /// - Parameters:
   ///     - color: The color to fill the capsule.
@@ -21,7 +21,7 @@ public extension Capsule {
 
 public extension Circle {
 
-  /// Fills the entire edge within a ``Circle``. If you define a size to the ``Circle``, it won't increase its frame.
+  /// Fills the background of the ``Circle`` and strokes it from the inside. Therefore if you define a size to the ``Circle``, it won't increase its frame even if you increase the line width.
   ///
   /// - Parameters:
   ///     - color: The color to fill the circle.
@@ -38,7 +38,7 @@ public extension Circle {
 @available(iOS 14.0, *)
 public extension ContainerRelativeShape {
 
-  /// Fills the entire edge within a ``ContainerRelativeShape``. If you define a size to the ``ContainerRelativeShape``, it won't increase its frame.
+  /// Fills the background of the ``ContainerRelativeShape`` and strokes it from the inside. Therefore if you define a size to the ``ContainerRelativeShape``, it won't increase its frame even if you increase the line width.
   ///
   /// - Parameters:
   ///     - color: The color to fill the container relative shape.
@@ -54,7 +54,7 @@ public extension ContainerRelativeShape {
 
 public extension Ellipse {
 
-  /// Fills the entire edge within a ``Ellipse``. If you define a size to the ``Ellipse``, it won't increase its frame.
+  /// Fills the background of the ``Ellipse`` and strokes it from the inside. Therefore if you define a size to the ``Ellipse``, it won't increase its frame even if you increase the line width.
   ///
   /// - Parameters:
   ///     - color: The color to fill the ellipse.
@@ -69,7 +69,7 @@ public extension Ellipse {
 
 public extension Rectangle {
 
-  /// Fills the entire edge within a ``Rectangle``. If you define a size to the ``Rectangle``, it won't increase its frame.
+  /// Fills the background of the ``Rectangle`` and strokes it from the inside. Therefore if you define a size to the ``Rectangle``, it won't increase its frame even if you increase the line width.
   ///
   /// - Parameters:
   ///     - color: The color to fill the rectangle.
@@ -84,7 +84,7 @@ public extension Rectangle {
 
 public extension RoundedRectangle {
 
-  /// Fills the entire edge within a ``RoundedRectangle``. If you define a size to the ``RoundedRectangle``, it won't increase its frame.
+  /// Fills the background of the ``RoundedRectangle`` and strokes it from the inside. Therefore if you define a size to the ``RoundedRectangle``, it won't increase its frame even if you increase the line width.
   ///
   /// - Parameters:
   ///     - color: The color to fill the rounded rectangle.

@@ -23,17 +23,17 @@ You will find a sample project at the following repository : [LAComponentsExampl
 ## Shape : 
 
 - `Capsule` :
-  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Capsule.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Capsule and strokes it from the inside.
 - `Circle` : 
-  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Circle.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Circle and strokes it from the inside.
 - `ContainerRelativeShape` : 
-  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a ContainerRelativeShape. 
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the ContainerRelativeShape and strokes it from the inside.
 - `Ellipse` : 
-  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Ellipse.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Ellipse and strokes it from the inside.
 - `Rectangle` : 
-  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Rectangle.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Rectangle and strokes it from the inside.
 - `RoundedRectangle` :
-  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a RoundedRectangle.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the RoundedRectangle and strokes it from the inside.
   
   
 ## Struct for style modifiers 
