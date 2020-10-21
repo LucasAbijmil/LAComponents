@@ -23,16 +23,22 @@ You will find a sample project at the following repository : [LAComponentsExampl
 ## Shape : 
 
 - `Capsule` :
+  - `fillInnerOutterStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Capsule and strokes it halfway from the inside and outside.
   - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Capsule and strokes it from the inside.
 - `Circle` : 
+  - `fillInnerOutterStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Circle and strokes it halfway from the inside and outside.
   - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Circle and strokes it from the inside.
 - `ContainerRelativeShape` : 
+  - `fillInnerOutterStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the ContainerRelativeShape and strokes it halfway from the inside and outside.
   - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the ContainerRelativeShape and strokes it from the inside.
 - `Ellipse` : 
+  - `fillInnerOutterStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Ellipse and strokes it halfway from the inside and outside.
   - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Ellipse and strokes it from the inside.
 - `Rectangle` : 
+  - `fillInnerOutterStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Rectangle and strokes it halfway from the inside and outside.
   - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the Rectangle and strokes it from the inside.
 - `RoundedRectangle` :
+  - `fillInnerOutterStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the RoundedRectangle and strokes it halfway from the inside and outside.
   - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the background of the RoundedRectangle and strokes it from the inside.
   
   
