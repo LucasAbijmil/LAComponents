@@ -23,17 +23,17 @@ You will find a sample project at the following repository : [LAComponentsExampl
 ## Shape : 
 
 - `Capsule` :
-  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Capsule.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Capsule.
 - `Circle` : 
-  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Circle.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Circle.
 - `ContainerRelativeShape` : 
-  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a ContainerRelativeShape. 
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a ContainerRelativeShape. 
 - `Ellipse` : 
-  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Ellipse.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Ellipse.
 - `Rectangle` : 
-  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Rectangle.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a Rectangle.
 - `RoundedRectangle` :
-  - `func fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a RoundedRectangle.
+  - `fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat = 2) -> some View` : Fills the entire edge within a RoundedRectangle.
   
   
 ## Struct for style modifiers 
@@ -71,8 +71,8 @@ You will find a sample project at the following repository : [LAComponentsExampl
   
   ## View Modifiers
 
-  - `backgroundColor(with color: Color) -> some View` : A color considered as a View to use it as background.
-  - `backgroundColor(with color: Color, at opacity: Double) -> some View` : A color with an opacity considered as View to use it as background.
+  - `backgroundColor(_ color: Color) -> some View` : A color considered as a View to use it as background.
+  - `backgroundColor(_ color: Color, at opacity: Double) -> some View` : A color with an opacity considered as View to use it as background.
   - `cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View` : Apply a radius to the corners specified.
   - `ifModifier<T>(for condition: Binding<Bool>, with modifier: T) -> some View where T: ViewModifier` : Apply a struct modifier to a if case depending on a Binding Bool.
   - `ifModifier<T>(for condition: Bool, with modifier: T) -> some View where T: ViewModifier` : Apply a struct modifier to a *if case* depending on a Bool.

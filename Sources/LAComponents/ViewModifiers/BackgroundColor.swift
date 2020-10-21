@@ -10,7 +10,7 @@ public extension View {
   ///
   /// - Parameters:
   ///     - color: The color used as a background.
-  func backgroundColor(with color: Color) -> some View {
+  func backgroundColor(_ color: Color) -> some View {
     self.background(color)
   }
 
@@ -19,7 +19,7 @@ public extension View {
   /// - Parameters:
   ///     - color: The color used as a background.
   ///     - opacity: An opacity between 0 and 1.
-  func backgroundColor(with color: Color, at opacity: Double) -> some View {
+  func backgroundColor(_ color: Color, at opacity: Double) -> some View {
     self.background(color.opacity(opacity))
   }
 }
