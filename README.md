@@ -12,7 +12,7 @@ The preferred way of installing LAComponents is via the Swift Package Manager (S
 4. Click Finish.
 
 ## Example 
-You will find a sample project at the following repository : [LAComponentsExample](https://github.com/LucasAbijmil/LAComponentsExample) (watchOS comming soon)
+You will find a sample project at the following repository : [LAComponentsExample](https://github.com/LucasAbijmil/LAComponentsExample)
 
 ## EnvironmentValues 
 
@@ -46,6 +46,8 @@ You will find a sample project at the following repository : [LAComponentsExampl
 
 - `ToggleStyle` :
   - `CheckBoxToggleStyle(frame: CGFloat, on colorOn: Color, off colorOff: Color)` : A ToggleStyle that displays a checkbox.
+- `RadioToggleStyle` :
+  - `RadioToggleStyle(radio: Color, stroke: Color? = nil, lineWidth: CGFloat, background: Color? = nil, frame: CGFloat, radioFrame: CGFloat)` : A ToggleStyle that displays a radio button.
 
 
 ## Swift Types

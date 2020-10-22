@@ -10,9 +10,9 @@ import SwiftUI
 /// To apply this style to a toggle, or to a view that contains toggles, use the ``toggleStyle(_:)`` modifier.
 public struct CheckBoxToggleStyle: ToggleStyle {
 
-  private let frame: CGFloat
-  private let colorOn: Color
-  private let colorOff: Color
+  public let frame: CGFloat
+  public let colorOn: Color
+  public let colorOff: Color
 
 
   /// Create a checkbox with the colors and frame provided.
