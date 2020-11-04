@@ -17,7 +17,7 @@ public struct RadioToggleStyle: ToggleStyle {
   public let frame: CGFloat
   public let radioFrame: CGFloat
 
-  /// Create a radio button, with the properties that you provides.
+  /// Creates a radio button, with the properties that you provides.
   ///
   /// - Parameters:
   ///     - radio: The color of the inner circle when the value of the ``Toggle`` is true.

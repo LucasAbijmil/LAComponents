@@ -8,7 +8,7 @@ The preferred way of installing LAComponents is via the Swift Package Manager (S
 
 1. In Xcode, open your project and navigate to File → Swift Packages → Add Package Dependency...
 2. Paste the repository URL (`https://github.com/LucasAbijmil/LAComponents`) and click Next.
-3. For Rules, select `Version`.
+3. For Rules, select `Branch: master`.
 4. Click Finish.
 
 ## Example 
@@ -77,29 +77,30 @@ You will find a sample project at the following repository : [LAComponentsExampl
   - `toDate(format: String) -> Date?` : Convert a String to a Date with the format you provide.
   
   
-  ## View Modifiers
+## View Modifiers
 
   - `backgroundColor(_ color: Color) -> some View` : A color considered as a View to use it as background.
   - `backgroundColor(_ color: Color, at opacity: Double) -> some View` : A color with an opacity considered as View to use it as background.
   - `cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View` : Apply a radius to the corners specified.
   - `ifModifier<T>(for condition: Binding<Bool>, with modifier: T) -> some View where T: ViewModifier` : Apply a struct modifier to a if case depending on a Binding Bool.
-  - `ifModifier<T>(for condition: Bool, with modifier: T) -> some View where T: ViewModifier` : Apply a struct modifier to a *if case* depending on a Bool.
+  - `ifModifier<T>(for condition: Bool, with modifier: T) -> some View where T: ViewModifier` : Apply a struct modifier to a if case depending on a Bool.
   - `ifElseModifier<M1, M2>(for condition: Binding<Bool>, if trueModifier: M1, else falseModifier: M2) -> some View where M1: ViewModifier, M2: ViewModifier` : Apply a struct modifier to the if case or to the else case depending on a Binding Bool.
   - `ifElseModifier<M1, M2>(for condition: Bool, if trueModifier: M1, else falseModifier: M2) -> some View where M1: ViewModifier, M2: ViewModifier` : Apply a struct modifier to the if case or to the else case depending on a Bool.
   
   
-  ## Views
+## Views
 
-  - `dismissKeyboard()`: Hide the keyboard by sending the action to the shared application.
-  - `GeometryProxy` : Properties renaming.
-      - `width` : size.width
-      - `height` : size.height
-      - `safeTop` : safeAreaInsets.top
-      - `safeBottom` : safeAreaInsets.bottom
-  - `Image` : init for remote image
-      - `init(for url: URL, with placeholder: String)` : Displays an image downloaded synchronously. If the download fails the image displays a placeholder.
-      - `init?(for url: URL)` : Displays an image downloaded synchronously.
-      
+- `dismissKeyboard()`: Hide the keyboard by sending the action to the shared application.
+- `GeometryProxy` : Properties renaming.
+  - `width` : size.width
+  - `height` : size.height
+  - `safeTop` : safeAreaInsets.top
+  - `safeBottom` : safeAreaInsets.bottom
+- `Image` : init for remote image
+  - `init(for url: URL, with placeholder: String)` : Displays an image downloaded synchronously. If the download fails the image displays a placeholder.
+  - `init?(for url: URL)` : Displays an image downloaded synchronously.
+- `LottieAnimation` : A view that displays a **Lottie** animation.
+  - `init(named: String, contentMode: UIView.ContentMode = .scaleAspectFill, loopMode: LottieLoopMode = .playOnce, animationSpeed: CGFloat = 1, completion: LottieCompletionBlock? = nil)` : Creates a Lottie animation with the passed parameters.
 
 
 ## Recommendations

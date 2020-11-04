@@ -15,7 +15,7 @@ public struct CheckBoxToggleStyle: ToggleStyle {
   public let colorOff: Color
 
 
-  /// Create a checkbox with the colors and frame provided.
+  /// Creates a checkbox with the colors and frame provided.
   ///
   /// - Parameters:
   ///     - frame: Frame of the ``View``.

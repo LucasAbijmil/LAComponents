@@ -13,11 +13,12 @@ let package = Package(
       targets: ["LAComponents"]),
   ],
   dependencies: [
+    .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "3.0.0")
   ],
   targets: [
     .target(
       name: "LAComponents",
-      dependencies: []),
+      dependencies: [._byNameItem(name: "Lottie", condition: .when(platforms: [.iOS, .tvOS]))]),
     .testTarget(
       name: "LAComponentsTests",
       dependencies: ["LAComponents"]),
