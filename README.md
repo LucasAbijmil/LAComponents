@@ -90,6 +90,8 @@ You will find a sample project at the following repository : [LAComponentsExampl
   
 ## Views
 
+- `BlurView` : A view that displays a blurred effect.
+  -  `init(style: UIBlurEffect.Style)` : Creates a visual effect view with the designated blurred effect.
 - `dismissKeyboard()`: Hide the keyboard by sending the action to the shared application.
 - `GeometryProxy` : Properties renaming.
   - `width` : size.width
