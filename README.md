@@ -62,6 +62,8 @@ You will find a sample project at the following repository : [LAComponentsExampl
 - `Bundle` : 
   - `releaseVersion` : Return the current release version.
   - `buildVersion` : Return the current build version.
+- `Collection` :
+  - `subscript(safe index: Index) -> Element?` : Custom subscript to avoid crashing the app when you try to access an index that is not contained in the Collection.
 - `Date` : 
   - `toString(format: String) -> String` : Convert a Date to a String in the format you provide.
 - `Double` : 
