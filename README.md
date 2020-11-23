@@ -50,8 +50,11 @@ You will find a sample project at the following repository : [LAComponentsExampl
   - `RadioToggleStyle(radio: Color, stroke: Color? = nil, lineWidth: CGFloat, background: Color? = nil, frame: CGFloat, radioFrame: CGFloat)` : A ToggleStyle that displays a radio button.
 
 
-## Swift Types
+## Swift
 
+### Swift Functions : 
+- `func log(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line)` : A custom log function to print the file, function, line calling the function with the message provided.
+### Swift Types
 - `Array` : 
   - `prepend(_ element: Element)` : Insert an Element at the beginning of the given Array.
   - `removeDuplicate() -> [Element]` : Delete all duplicate elements in a given Array.
