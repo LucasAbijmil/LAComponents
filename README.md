@@ -54,6 +54,7 @@ You will find a sample project at the following repository : [LAComponentsExampl
 
 ### Swift Functions : 
 - `func log(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line)` : A custom log function to print the file, function, line calling the function with the message provided.
+
 ### Swift Types
 - `Array` : 
   - `prepend(_ element: Element)` : Insert an Element at the beginning of the given Array.
@@ -77,6 +78,9 @@ You will find a sample project at the following repository : [LAComponentsExampl
   - `castDouble` : Cast an Int as a Double.
   - `castFloat` : Cast an Int as a Float.
   - `castCGFloat` : Cast an Int as a CGFloat.
+- `Optional` :
+  - `String` : 
+    - `orEmtpy` : A computed property, that returns the optional string unwrap or an empty string if the value is nil.
 - `String` :  
   - `trimmed` : String with spaces and new lines removed at both ends of the string.
   - `toDate(format: String) -> Date?` : Convert a String to a Date with the format you provide.
