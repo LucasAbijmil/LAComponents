@@ -78,12 +78,15 @@ You will find a sample project at the following repository : [LAComponentsExampl
   - `castDouble` : Cast an Int as a Double.
   - `castFloat` : Cast an Int as a Float.
   - `castCGFloat` : Cast an Int as a CGFloat.
-- `Optional` :
-  - `String` : 
+- `Optionals` :
+  - `OptionalString` : 
     - `orEmtpy` : A computed property, that returns the optional string unwrap or an empty string if the value is nil.
-- `String` :  
-  - `trimmed` : String with spaces and new lines removed at both ends of the string.
-  - `toDate(format: String) -> Date?` : Convert a String to a Date with the format you provide.
+- `Strings` :  
+  - `String` : 
+    - `trimmed` : String with spaces and new lines removed at both ends of the string.
+    - `toDate(format: String) -> Date?` : Convert a String to a Date with the format you provide.
+  - `StringInterpolation` :
+    - `mutating func appendInterpolation(localized key: String, _ args: CVarArg...)` : A custom String Interpolation which allows to use a localized string with parameters more easily.
   
   
 ## View Modifiers
