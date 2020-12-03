@@ -4,7 +4,7 @@
 
 import Foundation
 
-public extension String.StringInterpolation {
+public extension String.StringInterpolation {
 
   /// A custom String Interpolation which allows to use a localized string with parameters more easily.
   ///

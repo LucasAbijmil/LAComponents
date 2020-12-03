@@ -8,7 +8,7 @@ The preferred way of installing LAComponents is via the Swift Package Manager (S
 
 1. In Xcode, open your project and navigate to File → Swift Packages → Add Package Dependency...
 2. Paste the repository URL (`https://github.com/LucasAbijmil/LAComponents`) and click Next.
-3. For Rules, select `Branch: master`.
+3. For Rules, select `Branch: main`.
 4. Click Finish.
 
 ## Example 
@@ -86,7 +86,7 @@ You will find a sample project at the following repository : [LAComponentsExampl
     - `trimmed` : String with spaces and new lines removed at both ends of the string.
     - `toDate(format: String) -> Date?` : Convert a String to a Date with the format you provide.
   - `StringInterpolation` :
-    - `mutating func appendInterpolation(localized key: String, _ args: CVarArg...)` : A custom String Interpolation which allows to use a localized string with parameters more easily.
+    - `appendInterpolation(localized key: String, _ args: CVarArg...)` : A custom String Interpolation which allows to use a localized string with parameters more easily.
   
   
 ## View Modifiers
@@ -115,6 +115,7 @@ You will find a sample project at the following repository : [LAComponentsExampl
   - `init?(for url: URL)` : Displays an image downloaded synchronously.
 - `LottieAnimation` : A view that displays a **Lottie** animation.
   - `init(named: String, contentMode: UIView.ContentMode = .scaleAspectFill, loopMode: LottieLoopMode = .playOnce, animationSpeed: CGFloat = 1, completion: LottieCompletionBlock? = nil)` : Creates a Lottie animation with the passed parameters.
+- `redacted(reason: RedactionReasons) -> some View` : Adds a custom reason to apply a redaction to this view hierarchy.
 
 
 ## Recommendations
