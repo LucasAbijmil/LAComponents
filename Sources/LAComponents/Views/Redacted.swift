@@ -18,6 +18,8 @@ public enum RedactionReasons {
 
   /// Displayed data is blurred with the radius you provide.
   case blurred(radius: CGFloat)
+  /// Data displayed is covered by the color you provide.
+  case overlay(color: Color)
 }
 
 /// A struct that applies the correct ViewModifier based on the RedactionReason.
@@ -31,6 +33,9 @@ fileprivate struct Redacted: ViewModifier {
     case .blurred(let radius):
       content
         .modifier(BlurredRedaction(radius: radius))
+    case .overlay(let color):
+      content
+        .modifier(OverlayRedaction(color: color))
     }
   }
 }
@@ -43,5 +48,16 @@ fileprivate struct BlurredRedaction: ViewModifier {
     content
       .accessibility(label: Text("Data is blurred"))
       .blur(radius: radius)
+  }
+}
+
+fileprivate struct OverlayRedaction: ViewModifier {
+
+  let color: Color
+
+  func body(content: Content) -> some View {
+    content
+      .accessibility(label: Text("Data is covered"))
+      .overlay(color)
   }
 }
