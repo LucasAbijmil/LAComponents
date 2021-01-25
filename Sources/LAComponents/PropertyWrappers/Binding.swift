@@ -15,12 +15,10 @@ public extension Binding {
   /// - Parameters:
   ///     - completion: Function called when ``Binding`` changes value
   func onChange(_ completion: @escaping (Value) -> Void) -> Binding<Value> {
-    Binding(
-      get: { self.wrappedValue },
-      set: { newValue in
-        self.wrappedValue = newValue
-        completion(newValue)
-      }
-    )
+    Binding(get: { self.wrappedValue },
+            set: { newValue in
+              self.wrappedValue = newValue
+              completion(newValue)
+            })
   }
 }

@@ -100,6 +100,13 @@ You will find a sample project at the following repository : [LAComponentsExampl
   - `ifElseModifier<M1, M2>(for condition: Bool, if trueModifier: M1, else falseModifier: M2) -> some View where M1: ViewModifier, M2: ViewModifier` : Apply a struct modifier to the if case or to the else case depending on a Bool.
   
   
+## SwiftUI Previews
+
+  - `mock(_ value: Value) -> Self` : A convenient Binding for creating fully dynamic mocks.
+  - `previewComponentWithSizeCategory(colorScheme: ColorScheme) -> some View` : A method that allows you to preview a component with all ContentSizeCategory.
+  - `previewComponentWithColorScheme() -> some View` : A method that allows you to preview a component with all ColorScheme.
+
+
 ## Views
 
 - `BlurView` : A view that displays a blurred effect.
