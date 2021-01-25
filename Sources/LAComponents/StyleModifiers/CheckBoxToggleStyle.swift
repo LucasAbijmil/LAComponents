@@ -4,10 +4,11 @@
 
 import SwiftUI
 
-#if os(iOS) || os(watchOS)
 /// A ``ToggleStyle`` that displays a checkbox.
 ///
 /// To apply this style to a toggle, or to a view that contains toggles, use the ``toggleStyle(_:)`` modifier.
+@available(iOS 13.0, macOS 11.0, watchOS 6.0, *)
+@available(tvOS, unavailable)
 public struct CheckBoxToggleStyle: ToggleStyle {
 
   public let frame: CGFloat
@@ -43,4 +44,3 @@ public struct CheckBoxToggleStyle: ToggleStyle {
     }
   }
 }
-#endif

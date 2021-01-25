@@ -8,6 +8,7 @@ import SwiftUI
 import Lottie
 
 /// A view that displays a Lottie animation.
+@available(iOS 13.0, tvOS 13.0, *)
 public struct LottieAnimation: UIViewRepresentable {
 
   private let named: String

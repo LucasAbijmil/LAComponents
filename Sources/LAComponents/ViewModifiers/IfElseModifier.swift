@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public extension View {
 
   /// Apply a struct modifier to the *if case* or to the *else case* depending on a ``Binding Bool``.

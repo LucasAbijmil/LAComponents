@@ -4,10 +4,11 @@
 
 import SwiftUI
 
-#if !os(tvOS)
 /// A ``ToggleStyle`` that displays a radio button.
 ///
 /// To apply this style to a toggle, or to a view that contains toggles, use the ``toggleStyle(_:)`` modifier.
+@available(iOS 13.0, macOS 10.15, watchOS 6.0, *)
+@available(tvOS, unavailable)
 public struct RadioToggleStyle: ToggleStyle {
 
   public let radio: Color
@@ -60,4 +61,3 @@ public struct RadioToggleStyle: ToggleStyle {
     }
   }
 }
-#endif

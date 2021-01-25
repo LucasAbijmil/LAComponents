@@ -5,6 +5,7 @@
 import SwiftUI
 
 #if os(iOS)
+@available(iOS 13, *)
 public struct HapticFeedback {
 
   /// Apply a haptic impact.
@@ -41,6 +42,7 @@ public struct HapticFeedback {
   }
 }
 
+@available(iOS 13, *)
 public extension EnvironmentValues {
 
   /// An ``EnvironmentValue`` that allows 3 types of haptic feedback : impact, selection or notification.

@@ -4,9 +4,7 @@
 
 import SwiftUI
 
-// MARK: Fix this for each plateform
-#if os(iOS)
-@available(iOS 14.0, *)
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 public extension ContainerRelativeShape {
 
   /// Fills the background of the ``ContainerRelativeShape`` and strokes it halfway from the inside and outside. Therefore if you define a size to the ``ContainerRelativeShape``, it will increase its frame if you increase the width of the line.
@@ -33,4 +31,3 @@ public extension ContainerRelativeShape {
       .overlay(self.strokeBorder(strokeColor, lineWidth: lineWidth))
   }
 }
-#endif

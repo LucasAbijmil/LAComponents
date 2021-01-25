@@ -4,18 +4,8 @@
 
 import SwiftUI
 
-@available(OSX 11.0, *)
-public extension View {
-
-  /// A method that allows you to preview a component with all `ContentSizeCategory`.
-  /// - Parameters:
-  ///    - colorScheme: The color scheme of the component (light or dark).
-  func previewComponentWithSizeCategory(colorScheme: ColorScheme) -> some View {
-    ComponentDynamicSizePreview(component: self, colorScheme: colorScheme)
-  }
-}
-
-private extension ContentSizeCategory {
+@available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
+extension ContentSizeCategory {
 
   /// A `String` that describes the sizeCategory of each case.
   var previewName: String {
@@ -46,24 +36,6 @@ private extension ContentSizeCategory {
       return "AccessibilityExtraExtraExtraLarge"
     @unknown default:
       return "Uknown ContentSizeCategory"
-    }
-  }
-}
-
-/// A `struct` that loop over each `ContentSizeCategory` case.
-@available(OSX 11.0, *)
-private struct ComponentDynamicSizePreview<Component: View>: View {
-
-  var component: Component
-  var colorScheme: ColorScheme
-
-  var body: some View {
-    ForEach(ContentSizeCategory.allCases, id: \.self) { sizeCategory in
-      component
-        .previewLayout(.sizeThatFits)
-        .preferredColorScheme(colorScheme)
-        .environment(\.sizeCategory, sizeCategory)
-        .previewDisplayName("\(sizeCategory.previewName)")
     }
   }
 }
