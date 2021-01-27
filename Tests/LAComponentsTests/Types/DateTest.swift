@@ -20,7 +20,7 @@ final class DateTest: XCTestCase {
     let date = Date(timeIntervalSince1970: 1602280800)
     let expectedResult = "10/10/2020"
 
-    XCTAssertEqual(date.toString(format: "MM/dd/yyyy"), expectedResult)
+    XCTAssertEqual(date.string(format: "MM/dd/yyyy"), expectedResult)
 
     exepctation.fulfill()
     wait(for: [exepctation], timeout: 5)

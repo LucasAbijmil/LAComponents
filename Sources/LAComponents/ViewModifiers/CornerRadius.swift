@@ -5,6 +5,7 @@
 import SwiftUI
 
 #if !os(macOS)
+/// A struct that applies a radius to specific corners.
 @available(iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 fileprivate struct RoundedCorner: Shape {
 
@@ -24,8 +25,8 @@ public extension View {
   /// Apply a radius to the corners specified.
   /// 
   /// - Parameters:
-  ///     - radius: Value of the radius.
-  ///     - corners: Corners affected by the radius.
+  ///   - radius: Value of the radius.
+  ///   - corners: Corners affected by the radius.
   func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
     clipShape(RoundedCorner(corners: corners, radius: radius))
   }

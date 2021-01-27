@@ -7,9 +7,10 @@ import SwiftUI
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
 public extension View {
   
-  /// A method that allows you to preview a component with all `ContentSizeCategory`.
+  /// A method that allows you to preview a component with each case of `ContentSizeCategory`.
+  ///
   /// - Parameters:
-  ///    - colorScheme: The color scheme of the component (light or dark).
+  ///   - colorScheme: The color scheme of the component (light or dark).
   func previewComponentWithDynamicTypes(colorScheme: ColorScheme) -> some View {
     ComponentWithDynamicTypes(component: self, colorScheme: colorScheme)
   }

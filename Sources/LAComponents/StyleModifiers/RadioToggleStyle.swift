@@ -4,9 +4,9 @@
 
 import SwiftUI
 
-/// A ``ToggleStyle`` that displays a radio button.
+/// A `ToggleStyle` that displays a radio button.
 ///
-/// To apply this style to a toggle, or to a view that contains toggles, use the ``toggleStyle(_:)`` modifier.
+/// To apply this style to a toggle, or to a view that contains toggles, use the `toggleStyle(_:)` modifier.
 @available(iOS 13.0, macOS 10.15, watchOS 6.0, *)
 @available(tvOS, unavailable)
 public struct RadioToggleStyle: ToggleStyle {
@@ -21,12 +21,12 @@ public struct RadioToggleStyle: ToggleStyle {
   /// Creates a radio button, with the properties that you provides.
   ///
   /// - Parameters:
-  ///     - radio: The color of the inner circle when the value of the ``Toggle`` is true.
-  ///     - stroke: The color of the edge of the radio. If you don't provide this value then the color is the same as the radio one.
-  ///     - lineWidth: The width of the edge.
-  ///     - background: The radio's background. If you don't provide this value, the background is set to clear by default.
-  ///     - frame: The frame of the toggle.
-  ///     - radioFrame: The frame of the radio (= inner circle).
+  ///   - radio: The color of the inner circle when the value of the `Toggle` is true.
+  ///   - stroke: The color of the edge of the radio. If you don't provide this value then the color is the same as the radio one.
+  ///   - lineWidth: The width of the edge.
+  ///   - background: The radio's background. If you don't provide this value, the background is set to clear by default.
+  ///   - frame: The frame of the toggle.
+  ///   - radioFrame: The frame of the radio (= inner circle).
   public init(radio: Color, stroke: Color? = nil, lineWidth: CGFloat, background: Color = .clear, frame: CGFloat, radioFrame: CGFloat) {
     self.radio = radio
     self.stroke = stroke ?? radio

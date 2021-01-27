@@ -33,7 +33,7 @@ final class StringTest: XCTestCase {
     let string = "10/10/2020"
     let expectedResult = Date(timeIntervalSince1970: 1602280800)
 
-    XCTAssertEqual(string.toDate(format: "MM/dd/yyyy"), expectedResult)
+    XCTAssertEqual(string.date(format: "MM/dd/yyyy"), expectedResult)
 
     expectation.fulfill()
     wait(for: [expectation], timeout: 5)

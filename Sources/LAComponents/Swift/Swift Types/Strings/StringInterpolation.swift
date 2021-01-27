@@ -6,9 +6,9 @@ import Foundation
 
 public extension String.StringInterpolation {
 
-  /// A custom String Interpolation which allows to use a localized string with parameters more easily.
+  /// A custom `String Interpolation` which allows to use a localized string with parameters more easily.
   ///
-  /// In a ``SwiftUI View`` : ``Text(String(localized: "welcome.user", user.name))``
+  /// - Example : String(localized: "welcome.user", user.name)
   ///
   /// - Parameters:
   ///   - key: The key of the localized string.

@@ -7,7 +7,7 @@ import SwiftUI
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
 extension ColorScheme {
 
-  /// A `String` that describes the colorScheme of each case.
+  /// A `String` that describes the `ColorScheme` of each case.
   var previewName: String {
     switch self {
     case .dark:

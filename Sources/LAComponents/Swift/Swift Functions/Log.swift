@@ -4,7 +4,7 @@
 
 import Foundation
 
-/// A custom log function to print the file, function, line calling the function with the message provided.
+/// A custom log function that prints the message, file, function and the line calling this function.
 ///
 /// - Parameters:
 ///   - message: The message to be displayed.

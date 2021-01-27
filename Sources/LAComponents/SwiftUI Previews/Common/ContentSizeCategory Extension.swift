@@ -7,7 +7,7 @@ import SwiftUI
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
 extension ContentSizeCategory {
 
-  /// A `String` that describes the sizeCategory of each case.
+  /// A `String` that describes the `ContentSizeCategory` of each case.
   var previewName: String {
     switch self {
     case .extraSmall:

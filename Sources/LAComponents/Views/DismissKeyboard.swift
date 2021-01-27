@@ -19,9 +19,7 @@ public extension View {
 
   /// Forces the first responder to hide the keyboard by sending the action to the shared application.
   ///
-  /// You should call this function to hide the keyboard when the user clicks outside a ``Textfield``.
-  ///
-  /// To do this, create a ``ZStack`` with a transparent color and add the ``TapGesture`` modifier and call this function.
+  /// For example you can call this function in the `onCommit` closure of a `TextField`
   func dismissKeyboard() {
       UIApplication.shared.dismissKeyboard()
   }

@@ -8,27 +8,27 @@ import SwiftUI
 @available(iOS 13, *)
 public struct HapticFeedback {
 
-  /// Apply a haptic impact.
+  /// Creates and triggers an impact feedback.
   ///
   /// - Parameters:
-  ///     - strength: The mass of the impact.
+  ///   - strength: The mass of the impact.
   public func impact(strength: UIImpactFeedbackGenerator.FeedbackStyle) {
     let hapticImpact = UIImpactFeedbackGenerator(style: strength)
     hapticImpact.prepare()
     hapticImpact.impactOccurred()
   }
 
-  /// Apply a haptic selection.
+  /// Creates and triggers a selection feedback.
   public func selection() {
     let hapticSelection = UISelectionFeedbackGenerator()
     hapticSelection.prepare()
     hapticSelection.selectionChanged()
   }
 
-  /// Apply a haptic notification.
+  /// Creates and triggers a notification feedback.
   ///
   /// - Parameters:
-  ///     - notification: The type of notification.
+  ///   - notification: The type of the notification.
   public func notification(notification: UINotificationFeedbackGenerator.FeedbackType) {
     let hapticNotification = UINotificationFeedbackGenerator()
     hapticNotification.prepare()
@@ -37,7 +37,7 @@ public struct HapticFeedback {
 
   fileprivate enum EnvironmentKey: SwiftUI.EnvironmentKey {
 
-    /// Add this structure to the EnvironmentKey.
+    /// The default value for this `EnvironmentValue`.
     static let defaultValue = HapticFeedback()
   }
 }
@@ -45,7 +45,9 @@ public struct HapticFeedback {
 @available(iOS 13, *)
 public extension EnvironmentValues {
 
-  /// An ``EnvironmentValue`` that allows 3 types of haptic feedback : impact, selection or notification.
+  /// An `EnvironmentValue` that creates and triggers an haptic feedback.
+  ///
+  /// The kind of feedback can be : impact, selection or notification.
   var hapticFeedback: HapticFeedback {
     get {
       self[HapticFeedback.EnvironmentKey.self]
