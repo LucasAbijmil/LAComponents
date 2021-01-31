@@ -41,7 +41,7 @@ public extension Array where Element: Equatable {
     return self
   }
 
-  /// Delete all occurrences of the elements in the `Array` passed as parameters.
+  /// Delete all occurrences of the `Elements` in the `Array` passed as parameters.
   ///
   /// – Example : [1, 2, 2, 3, 3, 3].removeAll([2, 3]) –> [1]
   ///

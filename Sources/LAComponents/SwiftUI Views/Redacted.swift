@@ -55,7 +55,7 @@ fileprivate struct BlurredRedaction: ViewModifier {
 
   func body(content: Content) -> some View {
     content
-      .accessibility(label: Text("Data is blurred"))
+      .accessibilityLabel(Text("Data is blurred"))
       .blur(radius: radius)
   }
 }
@@ -67,7 +67,7 @@ fileprivate struct OverlayRedaction: ViewModifier {
 
   func body(content: Content) -> some View {
     content
-      .accessibility(label: Text("Data is covered"))
+      .accessibilityLabel(Text("Data is covered"))
       .overlay(color)
   }
 }

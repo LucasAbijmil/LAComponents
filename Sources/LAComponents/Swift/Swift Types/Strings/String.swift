@@ -6,7 +6,7 @@ import Foundation
 
 public extension String {
 
-  /// An empty `String`
+  /// An empty `String`.
   static let empty = ""
 
   /// A computed property that returns a new string that removes spaces and new lines at both ends of the string.
