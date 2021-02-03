@@ -259,6 +259,15 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 <details>
 	<summary><a href="https://github.com/LucasAbijmil/LAComponents/tree/main/Sources/LAComponents/SwiftUI%20ViewModifiers">SwiftUI ViewModifiers</a></summary>
 	<ul>
+		<details>
+			<summary><a href="https://github.com/LucasAbijmil/LAComponents/tree/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers">OS Modifiers</a></summary>
+			<ul>
+				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/iOS.swift">iOS&lt;Content: View&gt;(_ modifier: (Self) -> Content) -> some View</a></code> : A method that allows to apply modifiers only for iOS.</li>
+				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/macOS.swift">macOS&lt;Content: View&gt;(_ modifier: (Self) -> Content) -> some View</a></code> : A method that allows to apply modifiers only for macOS.</li>
+				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/tvOS.swift">tvOS&lt;Content: View&gt;(_ modifier: (Self) -> Content) -> some View</a></code> : A method that allows to apply modifiers only for tvOS.</li>
+				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/watchOS.swift">watchOS&lt;Content: View&gt;(_ modifier: (Self) -> Content) -> some View</a></code> : A method that allows to apply modifiers only for watchOS.</li>
+			</ul>
+		</details>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/BackgroundColor.swift">backgroundColor(_ color: Color) -> some View</a></code> : A color considered as a View to use it as a background.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/BackgroundColor.swift"> backgroundColor(_ color: Color, at opacity: Double) -> some View</a></code> : A color with an opacity considered as View to use it as a background.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/CornerRadius.swift">cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View</a></code> : Apply a radius to the corners specified.</li>
