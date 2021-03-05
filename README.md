@@ -192,17 +192,18 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 	<summary><a href="https://github.com/LucasAbijmil/LAComponents/tree/main/Sources/LAComponents/SwiftUI%20Shapes">SwiftUI Shapes</a></summary>
 	<ul>
 		<li>
+			<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Shapes/Arc.swift">Arc</a></code> : An arc centered on the frame of the view containing it.</summary>
+		</li>
+		<li>
+			<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Shapes/Polygon.swift">Polygon</a></code> : A polygonal shape aligned inside the frame of the view containing it.</summary>
+		</li>
+		<li>
 			<details>
-				<summary><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Shapes/InsettableShape.swift"><code>InsettableShape</code></a></summary>
+				<summary><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Shapes/InsettableShape.swift"><code>Shape</code> conforms to <code>InsettableShape</code></a></summary>
 				<ul>
 					<li><code>fillInnerOutterStroke(color: Color, strokeColor: Color, lineWidth: CGFloat) -> some View</code> : Fills the background of the Shape and strokes it halfway from the inside and outside.</li>
 					<li><code>fillInnerStroke(color: Color, strokeColor: Color, lineWidth: CGFloat) -> some View</code> : Fills the background of the Shape and strokes it from the inside.</li>
 				</ul>
-			</details>
-		</li>
-		<li>
-			<details>
-				<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Shapes/Polygon.swift">Polygon</a></code> : A polygonal shape aligned inside the frame of the view containing it.</summary>
 			</details>
 		</li>
 	</ul>

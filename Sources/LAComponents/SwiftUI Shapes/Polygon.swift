@@ -10,7 +10,7 @@ public struct Polygon: Shape {
 
   private var sides: Int
 
-  /// Create a polygonal shape with the number of sides passed as a parameter.
+  /// Creates a polygonal shape with the number of sides passed as a parameter.
   ///
   /// - Parameters:
   ///   - sides: The number of sides.
