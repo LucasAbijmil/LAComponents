@@ -154,6 +154,13 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 					<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Previews/Content/ContentWithDynamicTypes.swift">previewWithDynamicTypes(colorScheme: ColorScheme)</a></code> : A method that allows you to preview a content with each case of ContentSizeCategory.</li>
 				</ul>
 			</details>
+		<li>
+			<details>
+				<summary><a href="https://github.com/LucasAbijmil/LAComponents/tree/main/Sources/LAComponents/SwiftUI%20Previews/Devices">Devices</a></summary>
+				<ul>
+					<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Previews/Devices/DevicesPreview.swift">previewDevices(_ devices: [Device])</a></code> : A method that allows you to preview a content on multiple Device at the same time.</li>
+				</ul>
+			</details>
 		</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Previews/BindingMock.swift">mock(_ value: Value) -> Self</a></code> : A convenient Binding for creating fully dynamic mocks.</li>
 	</ul>
