@@ -48,6 +48,7 @@ public extension View {
   func hud<Content: View>(isPresented: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
     ZStack(alignment: .top) {
       self
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
 
       if isPresented.wrappedValue {
         HUD(content: content, onDismiss: onDismiss)
@@ -71,6 +72,7 @@ public extension View {
   func hud<Item: Identifiable, Content: View>(item: Binding<Item?>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
     ZStack(alignment: .top) {
       self
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
 
       if let _ = item.wrappedValue {
         HUD(content: content, onDismiss: onDismiss)
