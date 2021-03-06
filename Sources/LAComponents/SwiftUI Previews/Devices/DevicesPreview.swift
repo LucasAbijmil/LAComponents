@@ -16,7 +16,7 @@ public extension View {
   }
 }
 
-/// A `struct` that loop over each `Device` case.
+/// A struct that loop over each `Device` case.
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
 struct DevicesPreview<Content: View>: View {
 
@@ -34,7 +34,7 @@ struct DevicesPreview<Content: View>: View {
 
 /// A list of devices that may appear in the preview.
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
-public enum Device: String, CaseIterable {
+public enum Device: String {
   case iPhone6Plus = "iPhone 6 Plus"
   case iPhone6 = "iPhone 6"
   case iPhone6S = "iPhone 6s"

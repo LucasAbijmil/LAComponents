@@ -16,7 +16,7 @@ public extension View {
   }
 }
 
-/// A `struct` that loop over each `ContentSizeCategory` case.
+/// A struct that loop over each `ContentSizeCategory` case.
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
 fileprivate struct ComponentWithDynamicTypes<Component: View>: View {
   

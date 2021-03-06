@@ -13,7 +13,7 @@ public extension View {
   }
 }
 
-/// A `struct` that loop over each `ColorScheme` case.
+/// A struct that loop over each `ColorScheme` case.
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
 fileprivate struct ContentWithColorSchemes<Content: View>: View {
 

@@ -5,35 +5,6 @@
 import SwiftUI
 
 #if os(iOS)
-/// A struct that create a heads-up display (HUD).
-@available(iOS 13.0, *)
-@available(macOS, unavailable)
-@available(tvOS, unavailable)
-@available(watchOS, unavailable)
-fileprivate struct HUD<Content: View>: View {
-
-  @Environment(\.colorScheme) var colorScheme
-  let content: Content
-  let onDismiss: (() -> Void)?
-
-  // TO DO : Remove me in 5.4 and add @ViewBuilder before let content: Content
-  init(@ViewBuilder content: () -> Content, onDismiss: (() -> Void)?) {
-    self.content = content()
-    self.onDismiss = onDismiss
-  }
-
-  var body: some View {
-    content
-      .padding(.horizontal, 10)
-      .padding()
-      .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : .white) // TO DO : rework me
-      .clipShape(Capsule())
-      .shadow(color: Color.black.opacity(0.15), radius: 15, x: 0, y: 5) // TO DO : rework me
-      .animation(.default)
-      .onDisappear(perform: onDismiss)
-  }
-}
-
 @available(iOS 13.0, *)
 @available(macOS, unavailable)
 @available(tvOS, unavailable)
@@ -85,6 +56,35 @@ public extension View {
           .zIndex(999)
       }
     }
+  }
+}
+
+/// A struct that creates a heads-up display (HUD).
+@available(iOS 13.0, *)
+@available(macOS, unavailable)
+@available(tvOS, unavailable)
+@available(watchOS, unavailable)
+fileprivate struct HUD<Content: View>: View {
+
+  @Environment(\.colorScheme) var colorScheme
+  let content: Content
+  let onDismiss: (() -> Void)?
+
+  // TO DO : Remove me in 5.4 and add @ViewBuilder before let content: Content
+  init(@ViewBuilder content: () -> Content, onDismiss: (() -> Void)?) {
+    self.content = content()
+    self.onDismiss = onDismiss
+  }
+
+  var body: some View {
+    content
+      .padding(.horizontal, 10)
+      .padding()
+      .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : .white) // TO DO : rework me
+      .clipShape(Capsule())
+      .shadow(color: Color.black.opacity(0.15), radius: 15, x: 0, y: 5) // TO DO : rework me
+      .animation(.default)
+      .onDisappear(perform: onDismiss)
   }
 }
 #endif
