@@ -11,6 +11,13 @@ import SwiftUI
 @available(watchOS, unavailable)
 public extension View {
 
+  /// Presents a custom dialog when a given condition is true.
+  ///
+  /// - Parameters:
+  ///   - isPresented: A binding to whether the dialog is presented.
+  ///   - backgroundColor: The background color of the dialog.
+  ///   - onDismiss: A closure executed when the dialog dismisses.
+  ///   - content: A closure returning the content of the dialog.
   func dialog<Content: View>(isPresented: Binding<Bool>, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
     ZStack {
       self
@@ -23,6 +30,14 @@ public extension View {
     }
   }
 
+  /// Presents a custom dialog using the given item as a data source for the dialog's content.
+  ///
+  /// - Parameters:
+  ///   - item: A binding to an optional source of truth for the dialog. When representing a non-`nil` item, the system uses `content` to create a dialog representation of the item.
+  ///     If the identity changes, the system dismisses a currently-presented dialog and replaces it with a new dialog.
+  ///   - backgroundColor: The background color of the dialog.
+  ///   - onDismiss: A closure executed when the dialog dismisses.
+  ///   - content: A closure returning the content of the dialog.
   func dialog<Item: Identifiable, Content: View>(item: Binding<Item?>, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
     ZStack {
       self
@@ -34,9 +49,13 @@ public extension View {
       }
     }
   }
-
 }
 
+/// A struct that creates a custom dialog.
+@available(iOS 13.0, *)
+@available(macOS, unavailable)
+@available(tvOS, unavailable)
+@available(watchOS, unavailable)
 fileprivate struct Dialog<Content: View>: View {
 
   @Environment(\.currentDevice) var currentDevice
