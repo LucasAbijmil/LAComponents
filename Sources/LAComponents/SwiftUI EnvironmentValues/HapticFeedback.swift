@@ -6,6 +6,9 @@ import SwiftUI
 
 #if os(iOS)
 @available(iOS 13, *)
+@available(macOS, unavailable)
+@available(tvOS, unavailable)
+@available(watchOS, unavailable)
 public struct HapticFeedback {
 
   /// Creates and triggers an impact feedback.
@@ -43,6 +46,9 @@ public struct HapticFeedback {
 }
 
 @available(iOS 13, *)
+@available(macOS, unavailable)
+@available(tvOS, unavailable)
+@available(watchOS, unavailable)
 public extension EnvironmentValues {
 
   /// An `EnvironmentValue` that creates and triggers an haptic feedback.

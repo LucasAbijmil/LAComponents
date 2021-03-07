@@ -7,6 +7,7 @@ import SwiftUI
 #if !os(macOS)
 /// A struct that applies a radius to specific corners.
 @available(iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+@available(macOS, unavailable)
 fileprivate struct RoundedCorner: Shape {
 
   fileprivate var corners: UIRectCorner = .allCorners
@@ -20,6 +21,7 @@ fileprivate struct RoundedCorner: Shape {
 }
 
 @available(iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+@available(macOS, unavailable)
 public extension View {
 
   /// Apply a radius to the corners specified.

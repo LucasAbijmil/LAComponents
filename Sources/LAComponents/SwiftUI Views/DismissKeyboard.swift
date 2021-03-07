@@ -6,6 +6,8 @@ import SwiftUI
 
 #if os(iOS) || os(tvOS)
 @available(iOS 13.0, tvOS 13.0, *)
+@available(macOS, unavailable)
+@available(watchOS, unavailable)
 private extension UIApplication {
 
   /// Forces the first responder to resign its status in its window.
@@ -15,6 +17,8 @@ private extension UIApplication {
 }
 
 @available(iOS 13.0, tvOS 13.0, *)
+@available(macOS, unavailable)
+@available(watchOS, unavailable)
 public extension View {
 
   /// Forces the first responder to hide the keyboard by sending the action to the shared application.

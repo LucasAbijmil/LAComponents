@@ -11,9 +11,9 @@ import SwiftUI
 @available(tvOS, unavailable)
 public struct CheckBoxToggleStyle: ToggleStyle {
 
-  public let frame: CGFloat?
-  public let colorOn: Color
-  public let colorOff: Color
+  private let frame: CGFloat?
+  private let colorOn: Color
+  private let colorOff: Color
 
   /// Creates a checkbox with the colors and frame provided.
   ///

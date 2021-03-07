@@ -7,6 +7,8 @@ import SwiftUI
 #if os(iOS) || os(tvOS)
 /// A view that displays a blurred effect.
 @available(iOS 13.0, tvOS 13.0, *)
+@available(macOS, unavailable)
+@available(watchOS, unavailable)
 public struct BlurView: UIViewRepresentable {
 
   private let style: UIBlurEffect.Style

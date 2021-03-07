@@ -6,6 +6,9 @@ import SwiftUI
 
 #if os(iOS)
 @available(iOS 13, *)
+@available(macOS, unavailable)
+@available(tvOS, unavailable)
+@available(watchOS, unavailable)
 public struct CurrentDevice {
 
   /// A property that indicates if the current iOS device is an iPhone.
@@ -33,6 +36,9 @@ public struct CurrentDevice {
 }
 
 @available(iOS 13, *)
+@available(macOS, unavailable)
+@available(tvOS, unavailable)
+@available(watchOS, unavailable)
 public extension EnvironmentValues {
 
   /// An `EnvironmentValue` that returns the current iOS device.

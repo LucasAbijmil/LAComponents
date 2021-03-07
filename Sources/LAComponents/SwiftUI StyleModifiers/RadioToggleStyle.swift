@@ -11,12 +11,12 @@ import SwiftUI
 @available(tvOS, unavailable)
 public struct RadioToggleStyle: ToggleStyle {
 
-  public let radio: Color
-  public let stroke: Color
-  public let lineWidth: CGFloat
-  public let background: Color
-  public let frame: CGFloat
-  public let radioFrame: CGFloat
+  private let radio: Color
+  private let stroke: Color
+  private let lineWidth: CGFloat
+  private let background: Color
+  private let frame: CGFloat
+  private let radioFrame: CGFloat
 
   /// Creates a radio button, with the properties that you provides.
   ///
