@@ -70,7 +70,7 @@ fileprivate struct HUD<Content: View>: View {
   let content: Content
   let onDismiss: (() -> Void)?
 
-  // TO DO : Remove me in 5.4 and add @ViewBuilder before let content: Content
+  // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
   init(@ViewBuilder content: () -> Content, onDismiss: (() -> Void)?) {
     self.content = content()
     self.onDismiss = onDismiss
@@ -80,9 +80,9 @@ fileprivate struct HUD<Content: View>: View {
     content
       .padding(.horizontal, 10)
       .padding()
-      .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : .white) // TO DO : rework me
+      .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : .white) // TODO : rework me
       .clipShape(Capsule())
-      .shadow(color: Color.black.opacity(0.15), radius: 15, x: 0, y: 5) // TO DO : rework me
+      .shadow(color: Color.black.opacity(0.15), radius: 15, x: 0, y: 5) // TODO : rework me
       .animation(.default)
       .onDisappear(perform: onDismiss)
   }
