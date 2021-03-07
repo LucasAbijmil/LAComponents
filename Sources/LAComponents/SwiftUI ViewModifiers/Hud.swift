@@ -15,6 +15,7 @@ public extension View {
   ///
   /// - Parameters:
   ///   - isPresented: A binding to whether the heads-up display is presented.
+  ///   - onDismiss: A closure executed when the heads-up dismisses.
   ///   - content: A closure returning the content of the heads-up display.
   func hud<Content: View>(isPresented: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
     ZStack(alignment: .top) {
@@ -39,6 +40,7 @@ public extension View {
   /// - Parameters:
   ///   - item: A binding to an optional source of truth for the heads-up display. When representing a non-`nil` item, the system uses `content` to create a heads-up display representation of the item.
   ///     If the identity changes, the system dismisses a currently-presented heads-up display and replaces it with a new heads-up display.
+  ///   - onDismiss: A closure executed when the heads-up dismisses.
   ///   - content: A closure returning the content of the heads-up display.
   func hud<Item: Identifiable, Content: View>(item: Binding<Item?>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
     ZStack(alignment: .top) {
