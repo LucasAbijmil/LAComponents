@@ -42,13 +42,13 @@ public extension View {
   ///     If the identity changes, the system dismisses a currently-presented heads-up display and replaces it with a new heads-up display.
   ///   - onDismiss: A closure executed when the heads-up display dismisses.
   ///   - content: A closure returning the content of the heads-up display.
-  func hud<Item: Identifiable, Content: View>(item: Binding<Item?>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
+  func hud<Item: Identifiable, Content: View>(item: Binding<Item?>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: (Item) -> Content) -> some View {
     ZStack(alignment: .top) {
       self
         .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-      if let _ = item.wrappedValue {
-        HUD(content: content, onDismiss: onDismiss)
+      if let wrappedValue = item.wrappedValue {
+        HUDItem(content: content, item: wrappedValue, onDismiss: onDismiss)
           .transition(AnyTransition.move(edge: .top).combined(with: .opacity))
           .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -75,6 +75,35 @@ fileprivate struct HUD<Content: View>: View {
   // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
   init(@ViewBuilder content: () -> Content, onDismiss: (() -> Void)?) {
     self.content = content()
+    self.onDismiss = onDismiss
+  }
+
+  var body: some View {
+    content
+      .padding(.horizontal, 10)
+      .padding()
+      .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : .white) // TODO : rework me
+      .clipShape(Capsule())
+      .shadow(color: Color.black.opacity(0.15), radius: 15, x: 0, y: 5) // TODO : rework me
+      .animation(.default)
+      .onDisappear(perform: onDismiss)
+  }
+}
+
+/// A struct that creates a heads-up display (HUD).
+@available(iOS 13.0, *)
+@available(macOS, unavailable)
+@available(tvOS, unavailable)
+@available(watchOS, unavailable)
+fileprivate struct HUDItem<Item: Identifiable, Content: View>: View {
+
+  @Environment(\.colorScheme) var colorScheme
+  let content: Content
+  let onDismiss: (() -> Void)?
+
+  // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
+  init(@ViewBuilder content: (Item) -> Content, item: Item, onDismiss: (() -> Void)?) {
+    self.content = content(item)
     self.onDismiss = onDismiss
   }
 
