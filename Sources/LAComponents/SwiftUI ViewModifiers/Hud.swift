@@ -25,7 +25,8 @@ public extension View {
 
       if isPresented.wrappedValue {
         HUD(content: content, onDismiss: onDismiss)
-          .transition(AnyTransition.move(edge: .top).combined(with: .opacity))
+          .transition(.asymmetric(insertion: AnyTransition.move(edge: .top).combined(with: .opacity),
+                                  removal: AnyTransition.offset(x: 0.0, y: -500)))
           .zIndex(999)
           .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + timer) {
@@ -51,7 +52,8 @@ public extension View {
 
       if let wrappedValue = item.wrappedValue {
         HUDItem(content: content, item: wrappedValue, onDismiss: onDismiss)
-          .transition(AnyTransition.move(edge: .top).combined(with: .opacity))
+          .transition(.asymmetric(insertion: AnyTransition.move(edge: .top).combined(with: .opacity),
+                                  removal: AnyTransition.offset(x: 0.0, y: -500)))
           .zIndex(999)
           .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + timer) {
