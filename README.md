@@ -266,6 +266,13 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 				</ul>
 			</details>
 		</li>
+		<li>
+			<details>
+				<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Views/Image.swift">Image</a></code></summary>
+				<ul>
+					<li><code>init(SFSymbol: SFSymbol)</code> : A delegating initializer for instantiate a SFSymbol more easily.</li>
+				</ul>
+			</details>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Views/Lottie.swift">LottieAnimation</a></code> : A view that displays a Lottie animation.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Views/Redacted.swift">redacted(_ reason: RedactionReasons) -> some View</a></code> : Adds a custom reason to apply a redaction to this view hierarchy.</li>
 	</ul>
