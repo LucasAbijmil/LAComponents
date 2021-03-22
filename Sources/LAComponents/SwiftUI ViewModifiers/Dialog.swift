@@ -106,7 +106,6 @@ fileprivate struct Dialog<Content: View>: View {
 }
 
 /// A struct that creates a custom dialog.
-// FIXME: rename + description
 @available(iOS 13.0, *)
 @available(macOS, unavailable)
 @available(tvOS, unavailable)

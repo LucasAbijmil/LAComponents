@@ -16,7 +16,7 @@ public extension View {
       .background(color)
   }
 
-  /// A color with an opacity considered as `View` to use it as a background.
+  /// A color with an opacity considered as a `View` to use it as a background.
   ///
   /// - Parameters:
   ///   - color: The color used as a background.

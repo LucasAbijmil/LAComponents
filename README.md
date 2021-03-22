@@ -83,7 +83,7 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 						<details>
 							<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/Swift/Swift%20Types/Optionals/OptionalString.swift">Optional String</a></code></summary>
 							<ul>
-								<li><code>orEmpty</code> : A computed property, that returns the optional string unwrap or an empty one if the value is nil.</li>
+								<li><code>orEmpty</code> : A computed property, that returns the optional String unwrap or an empty one if the value is nil.</li>
 							</ul>
 						</details>
 					</li>
@@ -99,7 +99,7 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 							<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/Swift/Swift%20Types/Strings/String.swift">String</a></code></summary>
 							<ul>
 								<li><code>empty</code> : An empty String.</li>
-								<li><code>trimmed</code> : A computed property that returns a new string that removes spaces and new lines at both ends of the string.</li>
+								<li><code>trimmed</code> : A computed property that returns a new string that removes spaces and new lines at both ends of the String.</li>
 								<li><code>date(format: String) -> Date?</code> : Convert a String to a Date? in the format you provide.</li>
 							</ul>
 						</details>
@@ -237,7 +237,7 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 			</ul>
 		</details>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/BackgroundColor.swift">backgroundColor(_ color: Color) -> some View</a></code> : A color considered as a View to use it as a background.</li>
-		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/BackgroundColor.swift"> backgroundColor(_ color: Color, at opacity: Double) -> some View</a></code> : A color with an opacity considered as View to use it as a background.</li>
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/BackgroundColor.swift"> backgroundColor(_ color: Color, at opacity: Double) -> some View</a></code> : A color with an opacity considered as a View to use it as a background.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/CornerRadius.swift">cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View</a></code> : Apply a radius to the corners specified.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/Dialog.swift">dialog&lt;Content: View&gt;(isPresented: Binding&lt;Bool&gt;, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View</a></code> : Presents a custom dialog when a given condition is true.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/Dialog.swift">dialog&lt;Item: Identifiable, Content: View&gt;(item: Binding&lt;Item?&gt;, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: (Item) -> Content) -> some View</a></code> : Presents a custom dialog using the given item as a data source for the dialog's content.</li>
