@@ -86,11 +86,10 @@ fileprivate struct Dialog<Content: View>: View {
                  maxHeight: currentDevice.isIpad ? min(geo.width, geo.height) * 0.5 : min(geo.width, geo.height) - (verticalSizeClass == .regular ? 32 : 0))
           .background(backgroundColor)
           .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-          .frame(maxWidth: .infinity)
-          .frame(maxHeight: .infinity)
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
           .padding(.horizontal, currentDevice.isIpad ? 0 : verticalSizeClass == .regular ? 16 : 0)
           .padding(.vertical, currentDevice.isIpad ? 0 : verticalSizeClass == .compact ? 16 : 0)
-          .shadow(color: Color.black.opacity(0.25), radius: 10, x: 0.0, y: 0) // TODO: rework me
+          .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 20)
           .gesture(
             DragGesture()
               .onEnded {
@@ -140,11 +139,10 @@ fileprivate struct DialogItem<Item: Identifiable, Content: View>: View {
                  maxHeight: currentDevice.isIpad ? min(geo.width, geo.height) * 0.5 : min(geo.width, geo.height) - (verticalSizeClass == .regular ? 32 : 0))
           .background(backgroundColor)
           .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-          .frame(maxWidth: .infinity)
-          .frame(maxHeight: .infinity)
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
           .padding(.horizontal, currentDevice.isIpad ? 0 : verticalSizeClass == .regular ? 16 : 0)
           .padding(.vertical, currentDevice.isIpad ? 0 : verticalSizeClass == .compact ? 16 : 0)
-          .shadow(color: Color.black.opacity(0.25), radius: 10, x: 0.0, y: 0) // TODO: rework me
+          .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 20)
           .gesture(
             DragGesture()
               .onEnded {
