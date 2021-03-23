@@ -8,8 +8,6 @@ public extension String.StringInterpolation {
 
   /// A custom `String Interpolation` which allows to use a localized string with parameters more easily.
   ///
-  /// - Example : String(localized: "welcome.user", user.name)
-  ///
   /// - Parameters:
   ///   - key: The key of the localized string.
   ///   - args: parameters of the localized string.

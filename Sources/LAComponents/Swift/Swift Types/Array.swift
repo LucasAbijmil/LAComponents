@@ -8,8 +8,6 @@ public extension Array {
 
   /// Insert an `Element` at the beginning of the given `Array`.
   ///
-  /// - Example : [1, 2, 3, 4, 5].prepend(0) –> [0, 1, 2, 3, 4, 5]
-  ///
   /// - Parameters:
   ///   - element: The element to be inserted.
   mutating func prepend(_ element: Element) {
@@ -20,8 +18,6 @@ public extension Array {
 public extension Array where Element: Equatable {
 
   /// Delete all duplicate elements in a given `Array`.
-  ///
-  /// - Example : [1, 2, 2, 3, 3, 3].removeDuplicate() –> [1, 2, 3]
   mutating func removeDuplicate() -> [Element] {
     self = reduce(into: [Element]()) {
       if !$0.contains($1) { $0.append($1) }
@@ -32,8 +28,6 @@ public extension Array where Element: Equatable {
 
   /// Delete all occurrences of an `Element` in a given `Array`.
   ///
-  /// - Example : [1, 2, 3, 3, 3].removeAll(3) –> [1, 2]
-  ///
   /// - Parameters:
   ///   - element: The element whose occurrences must be removed.
   mutating func removeAll(_ element: Element) -> [Element] {
@@ -42,8 +36,6 @@ public extension Array where Element: Equatable {
   }
 
   /// Delete all occurrences of the `Elements` in the `Array` passed as parameters.
-  ///
-  /// – Example : [1, 2, 2, 3, 3, 3].removeAll([2, 3]) –> [1]
   ///
   /// - Parameters:
   ///   - elements: The elements whose occurrences must be removed.
