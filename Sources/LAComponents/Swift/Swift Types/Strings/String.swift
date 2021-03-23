@@ -9,9 +9,14 @@ public extension String {
   /// An empty `String`.
   static let empty = ""
 
-  /// A computed property that returns a new string that removes spaces and new lines at both ends of the String.
+  /// A computed property that returns a new `String` that removes spaces and new lines at both ends of the `String`.
   var trimmed: String {
     return trimmingCharacters(in: .whitespacesAndNewlines)
+  }
+
+  /// A computed property that returns the `String` with the first letter capitalized.
+  var firstLetterCapitalized: String {
+    return capitalizingFirstLetter()
   }
 
   /// Convert a `String` to a `Date?` in the format you provide.
@@ -25,5 +30,10 @@ public extension String {
     df.dateFormat = format
 
     return df.date(from: self)
+  }
+
+  /// Transforms the first letter of the `String` into a capitalized letter.
+  func capitalizingFirstLetter() -> String {
+    return prefix(1).capitalized + dropFirst()
   }
 }

@@ -16,10 +16,9 @@ final class StringTest: XCTestCase {
   }
 
   func testTrimmed() {
-    let expectation = self.expectation(description: "trimedOk")
-
     let string = "\n     Hello world     \n"
     let expectedResult = "Hello world"
+    let expectation = self.expectation(description: "trimmedOk")
 
     XCTAssertEqual(string.trimmed, expectedResult)
 
@@ -27,13 +26,34 @@ final class StringTest: XCTestCase {
     wait(for: [expectation], timeout: 5)
   }
 
-  func testToDate() {
-    let expectation = self.expectation(description: "toDateOk")
+  func testFirstLetterCapitalized() {
+    let string = "hello world !"
+    let expectedResult = "Hello world !"
+    let expectation = self.expectation(description: "firstLetterCapitalizedOK")
 
+    XCTAssertEqual(string.firstLetterCapitalized, expectedResult)
+
+    expectation.fulfill()
+    wait(for: [expectation], timeout: 5)
+  }
+
+  func testToDate() {
     let string = "10/10/2020"
     let expectedResult = Date(timeIntervalSince1970: 1602280800)
+    let expectation = self.expectation(description: "toDateOk")
 
     XCTAssertEqual(string.date(format: "MM/dd/yyyy"), expectedResult)
+
+    expectation.fulfill()
+    wait(for: [expectation], timeout: 5)
+  }
+
+  func testCapitalizingFirstLetter() {
+    let string = "hello world !"
+    let expectedResult = "Hello world !"
+    let expectation = self.expectation(description: "capitalizingFirstLetterOk")
+
+    XCTAssertEqual(string.capitalizingFirstLetter(), expectedResult)
 
     expectation.fulfill()
     wait(for: [expectation], timeout: 5)

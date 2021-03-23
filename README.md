@@ -99,8 +99,10 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 							<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/Swift/Swift%20Types/Strings/String.swift">String</a></code></summary>
 							<ul>
 								<li><code>empty</code> : An empty String.</li>
-								<li><code>trimmed</code> : A computed property that returns a new string that removes spaces and new lines at both ends of the String.</li>
+								<li><code>trimmed</code> : A computed property that returns a new String that removes spaces and new lines at both ends of the String.</li>
+								<li><code>firstLetterCapitalized</code> : A computed property that returns the String with the first letter capitalized.</li>
 								<li><code>date(format: String) -> Date?</code> : Convert a String to a Date? in the format you provide.</li>
+								<li><code>capitalizingFirstLetter() -> String</code> : Transforms the first letter of the String into a capitalized letter.</li>
 							</ul>
 						</details>
 					</li>
