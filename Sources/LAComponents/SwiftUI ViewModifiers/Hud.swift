@@ -72,7 +72,6 @@ public extension View {
 @available(watchOS, unavailable)
 fileprivate struct HUD<Content: View>: View {
 
-  @Environment(\.colorScheme) var colorScheme
   let content: Content
   let onDismiss: (() -> Void)?
 
@@ -86,9 +85,9 @@ fileprivate struct HUD<Content: View>: View {
     content
       .padding(.horizontal, 10)
       .padding()
-      .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : .white) // TODO : rework me
+      .background(BlurView(style: .systemMaterial))
       .clipShape(Capsule())
-      .shadow(color: Color.black.opacity(0.15), radius: 15, x: 0, y: 5) // TODO : rework me
+      .shadow(color: Color.black.opacity(0.20), radius: 20, x: 0, y: 5)
       .animation(.default)
       .onDisappear(perform: onDismiss)
   }
@@ -101,7 +100,6 @@ fileprivate struct HUD<Content: View>: View {
 @available(watchOS, unavailable)
 fileprivate struct HUDItem<Item: Identifiable, Content: View>: View {
 
-  @Environment(\.colorScheme) var colorScheme
   let content: Content
   let onDismiss: (() -> Void)?
 
@@ -115,9 +113,9 @@ fileprivate struct HUDItem<Item: Identifiable, Content: View>: View {
     content
       .padding(.horizontal, 10)
       .padding()
-      .background(colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : .white) // TODO : rework me
+      .background(BlurView(style: .systemMaterial))
       .clipShape(Capsule())
-      .shadow(color: Color.black.opacity(0.15), radius: 15, x: 0, y: 5) // TODO : rework me
+      .shadow(color: Color.black.opacity(0.20), radius: 20, x: 0, y: 5)
       .animation(.default)
       .onDisappear(perform: onDismiss)
   }
