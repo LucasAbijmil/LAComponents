@@ -13,15 +13,13 @@ public extension View {
   ///   - condition: `Binding<Bool>`.
   ///   - trueModifier: A `ViewModifier` struct apply to the if case.
   ///   - falseModifier: A `ViewModifier` struct apply to the else case.
-  func ifElseModifier<M1, M2>(for condition: Binding<Bool>, if trueModifier: M1, else falseModifier: M2) -> some View where M1: ViewModifier, M2: ViewModifier {
-    Group {
-      if condition.wrappedValue {
-        self
-          .modifier(trueModifier)
-      } else {
-        self
-          .modifier(falseModifier)
-      }
+  @ViewBuilder func ifElseModifier<T: ViewModifier, U: ViewModifier>(_ condition: Binding<Bool>, if trueModifier: T, else falseModifier: U) -> some View {
+    if condition.wrappedValue {
+      self
+        .modifier(trueModifier)
+    } else {
+      self
+        .modifier(falseModifier)
     }
   }
 
@@ -31,15 +29,13 @@ public extension View {
   ///   - condition: `Bool`.
   ///   - trueModifier: A `ViewModifier` struct apply to the if case.
   ///   - falseModifier: A `ViewModifier` struct apply to the else case.
-  func ifElseModifier<M1, M2>(for condition: Bool, if trueModifier: M1, else falseModifier: M2) -> some View where M1: ViewModifier, M2: ViewModifier {
-    Group {
-      if condition {
-        self
-          .modifier(trueModifier)
-      } else {
-        self
-          .modifier(falseModifier)
-      }
+  @ViewBuilder func ifElseModifier<T: ViewModifier, U: ViewModifier>(_ condition: Bool, if trueModifier: T, else falseModifier: U) -> some View {
+    if condition {
+      self
+        .modifier(trueModifier)
+    } else {
+      self
+        .modifier(falseModifier)
     }
   }
 }

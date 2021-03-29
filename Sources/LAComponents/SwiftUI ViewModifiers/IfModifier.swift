@@ -12,14 +12,12 @@ public extension View {
   /// - Parameters:
   ///   - condition: `Binding<Bool>`.
   ///   - modifier: A `ViewModifier` struct apply to the if case.
-  func ifModifier<T>(for condition: Binding<Bool>, with modifier: T) -> some View where T: ViewModifier {
-    Group {
-      if condition.wrappedValue {
-        self
-          .modifier(modifier)
-      } else {
-        self
-      }
+  @ViewBuilder func ifModifier<T: ViewModifier>(_ condition: Binding<Bool>, with modifier: T) -> some View {
+    if condition.wrappedValue {
+      self
+        .modifier(modifier)
+    } else {
+      self
     }
   }
 
@@ -28,14 +26,12 @@ public extension View {
   /// - Parameters:
   ///   - condition : `Bool`.
   ///   - modifier: A `ViewModifier` structapply to the if case.
-  func ifModifier<T>(for condition: Bool, with modifier: T) -> some View where T: ViewModifier {
-    Group {
-      if condition {
-        self
-          .modifier(modifier)
-      } else {
-        self
-      }
+  @ViewBuilder func ifModifier<T: ViewModifier>(_ condition: Bool, with modifier: T) -> some View {
+    if condition {
+      self
+        .modifier(modifier)
+    } else {
+      self
     }
   }
 }
