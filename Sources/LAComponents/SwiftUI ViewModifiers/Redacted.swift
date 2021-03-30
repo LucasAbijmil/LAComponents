@@ -32,8 +32,7 @@ fileprivate struct Redacted: ViewModifier {
 
   let reason: RedactionReasons
 
-  @ViewBuilder
-  func body(content: Content) -> some View {
+  @ViewBuilder func body(content: Content) -> some View {
     switch reason {
     case .placeholder:
       content
