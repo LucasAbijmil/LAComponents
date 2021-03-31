@@ -39,7 +39,7 @@ public extension View {
   ///   - value: `Binding<T?>`.
   ///   - ifLetTransform: The transformation to be applied to the `View` passed as a parameter to the closure if the `value` is not `nil`.
   ///   - elseTransform: The transformation to be applied to the `View` passed as a parameter to the closure if the `value` is `nil`.
-  @ViewBuilder func ifLet<T, IfLetContent: View, ElseContent: View>(_ value: Binding<T?>, _ ifLetTransform: (Self, T) -> IfLetContent, _ elseTransform: (Self) -> ElseContent) -> some View {
+  @ViewBuilder func ifLet<T, IfLetContent: View, ElseContent: View>(_ value: Binding<T?>, _ ifLetTransform: (Self, T) -> IfLetContent, else elseTransform: (Self) -> ElseContent) -> some View {
     if let value = value.wrappedValue {
       ifLetTransform(self, value)
     } else {
@@ -53,7 +53,7 @@ public extension View {
   ///   - value: `T?`.
   ///   - ifLetTransform: The transformation to be applied to the `View` passed as a parameter to the closure if the `value` is not `nil`.
   ///   - elseTransform: The transformation to be applied to the `View` passed as a parameter to the closure if the `value` is `nil`.
-  @ViewBuilder func ifLet<T, IfLetContent: View, ElseContent: View>(_ value: T?, _ ifLetTransform: (Self, T) -> IfLetContent, _ elseTransform: (Self) -> ElseContent) -> some View {
+  @ViewBuilder func ifLet<T, IfLetContent: View, ElseContent: View>(_ value: T?, _ ifLetTransform: (Self, T) -> IfLetContent, else elseTransform: (Self) -> ElseContent) -> some View {
     if let value = value {
       ifLetTransform(self, value)
     } else {

@@ -39,7 +39,7 @@ public extension View {
   ///   - condition: `Binding<Bool>`.
   ///   - ifTransform: The transformation to be applied to the `View` passed as a parameter to the closure if the `condition` is true.
   ///   - elseTransform: The transformation to be applied to the `View` passed as a parameter to the closure if the `condition` is false.
-  @ViewBuilder func `if`<IfContent: View, ElseContent: View>(_ condition: Binding<Bool>, _ ifTransform: (Self) -> IfContent, _ elseTransform: (Self) -> ElseContent) -> some View {
+  @ViewBuilder func `if`<IfContent: View, ElseContent: View>(_ condition: Binding<Bool>, _ ifTransform: (Self) -> IfContent, else elseTransform: (Self) -> ElseContent) -> some View {
     if condition.wrappedValue {
       ifTransform(self)
     } else {
@@ -53,7 +53,7 @@ public extension View {
   ///   - condition: `Binding<Bool>`.
   ///   - ifTransform: The transformation to be applied to the `View` passed as a parameter to the closure if the `condition` is true.
   ///   - elseTransform: The transformation to be applied to the `View` passed as a parameter to the closure if the `condition` is false.
-  @ViewBuilder func `if`<IfContent: View, ElseContent: View>(_ condition: Bool, _ ifTransform: (Self) -> IfContent, _ elseTransform: (Self) -> ElseContent) -> some View {
+  @ViewBuilder func `if`<IfContent: View, ElseContent: View>(_ condition: Bool, _ ifTransform: (Self) -> IfContent, else elseTransform: (Self) -> ElseContent) -> some View {
     if condition {
       ifTransform(self)
     } else {

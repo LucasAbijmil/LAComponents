@@ -42,7 +42,7 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 			<details>
 				<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/Swift/Swift%20Types/Collection.swift">Collection</a></code></summary>
 				<ul>
-					<li><code>subscript(safe index: Index) -> Element?</code> : Custom subscript to avoid a crash when you try to access an index that is not necessarily contained in a Collection.
+					<li><code>subscript(safe index: Index) -> Element?</code> : Custom subscript to avoid a crash when you try to access an index that is not necessarily contained in a Collection.</li>
 				</ul>
 			</details>
 		</li>
@@ -50,7 +50,7 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 			<details>
 				<summary><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/Swift/Swift%20Types/Date.swift">Date</a></code></summary>
 				<ul>
-					<li><code>string(format: String) -> String</code> : Convert a Date to a String in the format you provide. 
+					<li><code>string(format: String) -> String</code> : Convert a Date to a String in the format you provide.</li>
 				</ul>
 			</details>
 		</li>
@@ -156,6 +156,7 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 					<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Previews/Content/ContentWithDynamicTypes.swift">previewWithDynamicTypes(colorScheme: ColorScheme)</a></code> : A method that allows you to preview a content with each case of ContentSizeCategory.</li>
 				</ul>
 			</details>
+		</li>
 		<li>
 			<details>
 				<summary><a href="https://github.com/LucasAbijmil/LAComponents/tree/main/Sources/LAComponents/SwiftUI%20Previews/Devices">Devices</a></summary>
@@ -240,23 +241,33 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 		</details>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/BackgroundColor.swift">backgroundColor(_ color: Color) -> some View</a></code> : A color considered as a View to use it as a background.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/BackgroundColor.swift"> backgroundColor(_ color: Color, at opacity: Double) -> some View</a></code> : A color with an opacity considered as a View to use it as a background.</li>
+		<br>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/CornerRadius.swift">cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View</a></code> : Apply a radius to the corners specified.</li>
+		<br>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/Dialog.swift">dialog&lt;Content: View&gt;(isPresented: Binding&lt;Bool&gt;, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View</a></code> : Presents a custom dialog when a given condition is true.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/Dialog.swift">dialog&lt;Item: Identifiable, Content: View&gt;(item: Binding&lt;Item?&gt;, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: (Item) -> Content) -> some View</a></code> : Presents a custom dialog using the given item as a data source for the dialog's content.</li>
+		<br>
 		<li><code><a href= "https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/Hud.swift">hud&lt;Content: View&gt;(isPresented: Binding&lt;Bool&gt;, timer: Double, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View</a></code> : Presents a heads-up display (HUD) when a given condition is true.</li>
 		<li><code><a href= "https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/Hud.swift">hud&lt;Item: Identifiable, Content: View&gt;(item: Binding&lt;Item?&gt;, timer: Double, onDismiss: (() -> Void)? = nil, @ViewBuilder content: (Item) -> Content) -> some View</a></code> : Presents a heads-up display (HUD) using the given item as a data source for the heads-up display's content.</li>
+		<br>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/If.swift">if&lt;Content: View&gt;(_ condition: Binding&lt;Bool&gt;, _ transform: (Self) -> Content) -> some View</a></code> : Executes a closure depending on a Binding&lt;Bool&gt; to apply a ViewModifier on a View.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/If.swift">if&lt;Content: View&gt;(_ condition: Bool, _ transform: (Self) -> Content) -> some View</a></code> : Executes a closure depending on a Bool to apply a ViewModifier on a View.</li>
-		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/If.swift">if&lt;IfContent: View, ElseContent: View&gt;(_ condition: Binding&lt;Bool&gt;, _ ifTransform: (Self) -> IfContent, _ elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a Binding&lt;Bool&gt; to apply a ViewModifier on a View.</li>
-		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/If.swift">if&lt;IfContent: View, ElseContent: View&gt;(_ condition: Bool, _ ifTransform: (Self) -> IfContent, _ elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a Bool to apply a ViewModifier on a View.</li>
+		<br>
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/If.swift">if&lt;IfContent: View, ElseContent: View&gt;(_ condition: Binding&lt;Bool&gt;, _ ifTransform: (Self) -> IfContent, else elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a Binding&lt;Bool&gt; to apply a ViewModifier on a View.</li>
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/If.swift">if&lt;IfContent: View, ElseContent: View&gt;(_ condition: Bool, _ ifTransform: (Self) -> IfContent, else elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a Bool to apply a ViewModifier on a View.</li>
+		<br>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfElseModifier.swift">ifElseModifier&lt;T: ViewModifier, U: ViewModifier&gt;(_ condition: Binding&lt;Bool&gt;, if trueModifier: T, else falseModifier: U) -> some View</a></code> : Apply a struct modifier to the if case or to the else case depending on a Binding&lt;Bool&gt;.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfElseModifier.swift">ifElseModifier&lt;T: ViewModifier, U: ViewModifier&gt;(_ condition: Bool, if trueModifier: T, else falseModifier: U) -> some View</a></code> : Apply a struct modifier to the if case or to the else case depending on a Bool.</li>
+		<br>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, Content: View&gt;(_ value: Binding&lt;T?&gt;, _ transform: (Self, T) -> Content) -> some View</a></code> : Executes a closure depending on a Binding&lt;T?&gt; to apply a ViewModifier on a View.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, Content: View&gt;(_ value: T?, _ transform: (Self, T) -> Content) -> some View</a></code> : Executes a closure depending on a T? to apply a ViewModifier on a View.</li>
-		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, IfLetContent: View, ElseContent: View&gt;(_ value: Binding&lt;T?&gt;, _ ifLetTransform: (Self, T) -> IfLetContent, _ elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a Binding&lt;T?&gt; to apply a ViewModifier on a View.</li>
-		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, IfLetContent: View, ElseContent: View&gt;(_ value: T?, _ ifLetTransform: (Self, T) -> IfLetContent, _ elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a T? to apply a ViewModifier on a View.</li>
+		<br>
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, IfLetContent: View, ElseContent: View&gt;(_ value: Binding&lt;T?&gt;, _ ifLetTransform: (Self, T) -> IfLetContent, else elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a Binding&lt;T?&gt; to apply a ViewModifier on a View.</li>
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, IfLetContent: View, ElseContent: View&gt;(_ value: T?, _ ifLetTransform: (Self, T) -> IfLetContent, else elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a T? to apply a ViewModifier on a View.</li>
+		<br>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfModifier.swift">ifModifier&lt;T: ViewModifier&gt;(_ condition: Binding&lt;Bool&gt;, with modifier: T) -> some View</a></code> : Apply a struct modifier to a if case depending on a Binding&lt;Bool&gt;.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfModifier.swift">ifModifier&lt;T: ViewModifier&gt;(_ condition: Bool, with modifier: T) -> some View</a></code> : Apply a struct modifier to a if case depending on a Bool.</li>
+		<br>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/Redacted.swift">redacted(_ reason: RedactionReasons) -> some View</a></code> : Adds a custom reason to apply a redaction to this view hierarchy.</li>
 	</ul>
 </details>
