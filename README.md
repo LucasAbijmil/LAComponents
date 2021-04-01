@@ -304,7 +304,6 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 				</ul>
 			</details>
 		</li>
-		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20Views/Lottie.swift">LottieAnimation</a></code> : A view that displays a Lottie animation.</li>
 	</ul>
 </details>
 
