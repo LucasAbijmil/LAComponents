@@ -18,7 +18,7 @@ public extension View {
   ///   - backgroundColor: The background color of the dialog.
   ///   - onDismiss: A closure executed when the dialog dismisses.
   ///   - content: A closure returning the content of the dialog.
-  func dialog<Content: View>(isPresented: Binding<Bool>, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
+  func dialog<Content: View>(isPresented: Binding<Bool>, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View {
     ZStack {
       self
 
@@ -38,7 +38,7 @@ public extension View {
   ///   - backgroundColor: The background color of the dialog.
   ///   - onDismiss: A closure executed when the dialog dismisses.
   ///   - content: A closure returning the content of the dialog.
-  func dialog<Item: Identifiable, Content: View>(item: Binding<Item?>, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: (Item) -> Content) -> some View {
+  func dialog<Item: Identifiable, Content: View>(item: Binding<Item?>, backgroundColor: Color, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping (Item) -> Content) -> some View {
     ZStack {
       self
 
@@ -66,7 +66,7 @@ fileprivate struct Dialog<Content: View>: View {
   let closeAction: () -> Void
 
   // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
-  init(@ViewBuilder content: () -> Content, backgroundColor: Color, onDismiss: (() -> Void)? = nil, dismissAction: @escaping () -> Void) {
+  init(@ViewBuilder content: @escaping () -> Content, backgroundColor: Color, onDismiss: (() -> Void)? = nil, dismissAction: @escaping () -> Void) {
     self.content = content()
     self.backgroundColor = backgroundColor
     self.onDismiss = onDismiss
@@ -119,7 +119,7 @@ fileprivate struct DialogItem<Item: Identifiable, Content: View>: View {
   let closeAction: () -> Void
 
   // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
-  init(@ViewBuilder content: (Item) -> Content, item: Item, backgroundColor: Color, onDismiss: (() -> Void)? = nil, dismissAction: @escaping () -> Void) {
+  init(@ViewBuilder content: @escaping (Item) -> Content, item: Item, backgroundColor: Color, onDismiss: (() -> Void)? = nil, dismissAction: @escaping () -> Void) {
     self.content = content(item)
     self.backgroundColor = backgroundColor
     self.onDismiss = onDismiss

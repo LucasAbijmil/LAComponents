@@ -18,7 +18,7 @@ public extension View {
   ///   - timer: The display duration in seconds of the heads-up display.
   ///   - onDismiss: A closure executed when the heads-up display dismisses.
   ///   - content: A closure returning the content of the heads-up display.
-  func hud<Content: View>(isPresented: Binding<Bool>, timer: Double, onDismiss: (() -> Void)? = nil, @ViewBuilder content: () -> Content) -> some View {
+  func hud<Content: View>(isPresented: Binding<Bool>, timer: Double, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View {
     ZStack(alignment: .top) {
       self
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -45,7 +45,7 @@ public extension View {
   ///   - timer: The display duration in seconds of the heads-up display.
   ///   - onDismiss: A closure executed when the heads-up display dismisses.
   ///   - content: A closure returning the content of the heads-up display.
-  func hud<Item: Identifiable, Content: View>(item: Binding<Item?>, timer: Double, onDismiss: (() -> Void)? = nil, @ViewBuilder content: (Item) -> Content) -> some View {
+  func hud<Item: Identifiable, Content: View>(item: Binding<Item?>, timer: Double, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping (Item) -> Content) -> some View {
     ZStack(alignment: .top) {
       self
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -76,7 +76,7 @@ fileprivate struct HUD<Content: View>: View {
   let onDismiss: (() -> Void)?
 
   // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
-  init(@ViewBuilder content: () -> Content, onDismiss: (() -> Void)?) {
+  init(@ViewBuilder content: @escaping () -> Content, onDismiss: (() -> Void)?) {
     self.content = content()
     self.onDismiss = onDismiss
   }
@@ -104,7 +104,7 @@ fileprivate struct HUDItem<Item: Identifiable, Content: View>: View {
   let onDismiss: (() -> Void)?
 
   // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
-  init(@ViewBuilder content: (Item) -> Content, item: Item, onDismiss: (() -> Void)?) {
+  init(@ViewBuilder content: @escaping (Item) -> Content, item: Item, onDismiss: (() -> Void)?) {
     self.content = content(item)
     self.onDismiss = onDismiss
   }
