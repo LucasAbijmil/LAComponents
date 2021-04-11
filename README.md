@@ -275,6 +275,12 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, IfLetContent: View, ElseContent: View&gt;(_ value: Binding&lt;T?&gt;, _ ifLetTransform: (Self, T) -> IfLetContent, else elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a Binding&lt;T?&gt; to apply a ViewModifier on a View.</li>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, IfLetContent: View, ElseContent: View&gt;(_ value: T?, _ ifLetTransform: (Self, T) -> IfLetContent, else elseTransform: (Self) -> ElseContent) -> some View</a></code> : Executes one closure or another depending on a T? to apply a ViewModifier on a View.</li>
 		<br>
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, U: ViewModifier&gt;(_ value: Binding&lt;T?&gt;, apply modifier: U) -> some View</a></code> : Applies a ViewModifier if the Binding&lt;T?&gt; is not nil.</li>
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, U: ViewModifier&gt;(_ value: T?, apply modifier: U) -> some View</a></code> : Applies a ViewModifier if the T? is not nil.</li>
+		<br>
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, U: ViewModifier, V: ViewModifier&gt;(_ value: Binding&lt;T?&gt;, apply trueModifier: U, else falseModifier: V) -> some View</a></code> : Apply one ViewModifier or another depending on a Binding&lt;T?&gt;.
+		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/IfLet.swift">ifLet&lt;T, U: ViewModifier, V: ViewModifier&gt;(_ value: T?, apply trueModifier: U, else falseModifier: V) -> some View</a></code> : Apply one ViewModifier or another depending on a T?.</li>
+		<br>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/Redacted.swift">redacted(_ reason: RedactionReasons) -> some View</a></code> : Adds a custom reason to apply a redaction to this view hierarchy.</li>
 	</ul>
 </details>

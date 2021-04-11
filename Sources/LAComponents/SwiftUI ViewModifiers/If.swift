@@ -65,7 +65,7 @@ public extension View {
   ///
   /// - Parameters:
   ///   - condition: `Binding<Bool>`.
-  ///   - modifier: A `ViewModifier` applied if the condition is true.
+  ///   - modifier: A `ViewModifier` applied if the `condition` is true.
   @ViewBuilder func `if`<T: ViewModifier>(_ condition: Binding<Bool>, apply modifier: T) -> some View {
     if condition.wrappedValue {
       self
@@ -79,7 +79,7 @@ public extension View {
   ///
   /// - Parameters:
   ///   - condition : `Bool`.
-  ///   - modifier: A `ViewModifier` applied if the condition is true.
+  ///   - modifier: A `ViewModifier` applied if the `condition` is true.
   @ViewBuilder func `if`<T: ViewModifier>(_ condition: Bool, apply modifier: T) -> some View {
     if condition {
       self
@@ -93,8 +93,8 @@ public extension View {
   ///
   /// - Parameters:
   ///   - condition: `Binding<Bool>`.
-  ///   - trueModifier: A `ViewModifier` applied if the condition is true.
-  ///   - falseModifier: A `ViewModifier` applied if the condition is false.
+  ///   - trueModifier: A `ViewModifier` applied if the `condition` is true.
+  ///   - falseModifier: A `ViewModifier` applied if the `condition` is false.
   @ViewBuilder func `if`<T: ViewModifier, U: ViewModifier>(_ condition: Binding<Bool>, apply trueModifier: T, else falseModifier: U) -> some View {
     if condition.wrappedValue {
       self
@@ -109,8 +109,8 @@ public extension View {
   ///
   /// - Parameters:
   ///   - condition: `Bool`.
-  ///   - trueModifier: A `ViewModifier` applied if the condition is true.
-  ///   - falseModifier: A `ViewModifier` applied if the condition is false.
+  ///   - trueModifier: A `ViewModifier` applied if the `condition` is true.
+  ///   - falseModifier: A `ViewModifier` applied if the `condition` is false.
   @ViewBuilder func `if`<T: ViewModifier, U: ViewModifier>(_ condition: Bool, apply trueModifier: T, else falseModifier: U) -> some View {
     if condition {
       self

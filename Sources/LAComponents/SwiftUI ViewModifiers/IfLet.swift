@@ -60,4 +60,64 @@ public extension View {
       elseTransform(self)
     }
   }
+
+  /// Applies a `ViewModifier` if the `Binding<T?>` is not nil.
+  ///
+  /// - Parameters:
+  ///   - value: `Binding<T?>`.
+  ///   - modifier: A `ViewModifier` applied if the `value` is not `nil`.
+  @ViewBuilder func ifLet<T, U: ViewModifier>(_ value: Binding<T?>, apply modifier: U) -> some View {
+    if value.wrappedValue != nil {
+      self
+        .modifier(modifier)
+    } else {
+      self
+    }
+  }
+
+  /// Applies a `ViewModifier` if the `T?` is not nil.
+  ///
+  /// - Parameters:
+  ///   - value: `T?`.
+  ///   - modifier: A `ViewModifier` applied if the `value` is not `nil`.
+  @ViewBuilder func ifLet<T, U: ViewModifier>(_ value: T?, apply modifier: U) -> some View {
+    if value != nil {
+      self
+        .modifier(modifier)
+    } else {
+      self
+    }
+  }
+
+  /// Apply one `ViewModifier` or another depending on a `Binding<T?>`.
+  ///
+  /// - Parameters:
+  ///   - value: `T?`.
+  ///   - trueModifier: A `ViewModifier` applied if the `value` is not `nil`.
+  ///   - falseModifier: A `ViewModifier` applied if the `value` is `nil`.
+  @ViewBuilder func ifLet<T, U: ViewModifier, V: ViewModifier>(_ value: Binding<T?>, apply trueModifier: U, else falseModifier: V) -> some View {
+    if value.wrappedValue != nil {
+      self
+        .modifier(trueModifier)
+    } else {
+      self
+        .modifier(falseModifier)
+    }
+  }
+
+  /// Apply one `ViewModifier` or another depending on a `T?`.
+  ///
+  /// - Parameters:
+  ///   - value: `T?`.
+  ///   - trueModifier: A `ViewModifier` applied if the `value` is not `nil`.
+  ///   - falseModifier: A `ViewModifier` applied if the `value` is `nil`.
+  @ViewBuilder func ifLet<T, U: ViewModifier, V: ViewModifier>(_ value: T?, apply trueModifier: U, else falseModifier: V) -> some View {
+    if value != nil {
+      self
+        .modifier(trueModifier)
+    } else {
+      self
+        .modifier(falseModifier)
+    }
+  }
 }
