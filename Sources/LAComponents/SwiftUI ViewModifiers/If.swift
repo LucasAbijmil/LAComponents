@@ -60,4 +60,64 @@ public extension View {
       elseTransform(self)
     }
   }
+
+  /// Applies a `ViewModifier` if the `Binding<Bool>` is set to true.
+  ///
+  /// - Parameters:
+  ///   - condition: `Binding<Bool>`.
+  ///   - modifier: A `ViewModifier` applied if the condition is true.
+  @ViewBuilder func `if`<T: ViewModifier>(_ condition: Binding<Bool>, apply modifier: T) -> some View {
+    if condition.wrappedValue {
+      self
+        .modifier(modifier)
+    } else {
+      self
+    }
+  }
+
+  /// Applies a `ViewModifier` if the `Bool` is set to true.
+  ///
+  /// - Parameters:
+  ///   - condition : `Bool`.
+  ///   - modifier: A `ViewModifier` applied if the condition is true.
+  @ViewBuilder func `if`<T: ViewModifier>(_ condition: Bool, apply modifier: T) -> some View {
+    if condition {
+      self
+        .modifier(modifier)
+    } else {
+      self
+    }
+  }
+
+  /// Apply one `ViewModifier` or another depending on a `Binding<Bool>`.
+  ///
+  /// - Parameters:
+  ///   - condition: `Binding<Bool>`.
+  ///   - trueModifier: A `ViewModifier` applied if the condition is true.
+  ///   - falseModifier: A `ViewModifier` applied if the condition is false.
+  @ViewBuilder func `if`<T: ViewModifier, U: ViewModifier>(_ condition: Binding<Bool>, apply trueModifier: T, else falseModifier: U) -> some View {
+    if condition.wrappedValue {
+      self
+        .modifier(trueModifier)
+    } else {
+      self
+        .modifier(falseModifier)
+    }
+  }
+
+  /// Apply one `ViewModifier` or another depending on a `Bool`.
+  ///
+  /// - Parameters:
+  ///   - condition: `Bool`.
+  ///   - trueModifier: A `ViewModifier` applied if the condition is true.
+  ///   - falseModifier: A `ViewModifier` applied if the condition is false.
+  @ViewBuilder func `if`<T: ViewModifier, U: ViewModifier>(_ condition: Bool, apply trueModifier: T, else falseModifier: U) -> some View {
+    if condition {
+      self
+        .modifier(trueModifier)
+    } else {
+      self
+        .modifier(falseModifier)
+    }
+  }
 }
