@@ -18,4 +18,17 @@ public extension View {
     return self
     #endif
   }
+
+  /// Applies a `ViewModifier` on a `View` only for watchOS.
+  ///
+  /// - Parameters:
+  ///   - modifier: A `ViewModifier` applied if the os is watchOS.
+  func watchOS<T: ViewModifier>(_ modifier: T) -> some View {
+    #if os(watchOS)
+    return self
+      .modifier(modifier)
+    #else
+    return self
+    #endif
+  }
 }

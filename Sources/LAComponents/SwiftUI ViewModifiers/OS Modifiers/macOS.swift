@@ -18,4 +18,17 @@ public extension View {
     return self
     #endif
   }
+
+  /// Applies a `ViewModifier` on a `View` only for macOS.
+  ///
+  /// - Parameters:
+  ///   - modifier: A `ViewModifier` applied if the os is macOS.
+  func macOS<T: ViewModifier>(_ modifier: T) -> some View {
+    #if os(macOS)
+    return self
+      .modifier(modifier)
+    #else
+    return self
+    #endif
+  }
 }

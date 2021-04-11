@@ -234,9 +234,16 @@ The preferred way of installing *LAComponents* is via the *Swift Package Manager
 			<summary><a href="https://github.com/LucasAbijmil/LAComponents/tree/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers">OS Modifiers</a></summary>
 			<ul>
 				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/iOS.swift">iOS&lt;Content: View&gt;(_ modifier: (Self) -> Content) -> some View</a></code> : Executes a closure that allows to apply a ViewModifier on a View only for iOS.</li>
+				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/iOS.swift">iOS&lt;T: ViewModifier&gt;(_ modifier: T) -> some View</a></code> : Applies a ViewModifier on a View only for iOS.</li>
+				<br>
 				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/macOS.swift">macOS&lt;Content: View&gt;(_ modifier: (Self) -> Content) -> some View</a></code> : Executes a closure that allows to apply a ViewModifier on a View only for macOS.</li>
+				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/macOS.swift">macOS&lt;T: ViewModifier&gt;(_ modifier: T) -> some View</a></code> : Applies a ViewModifier on a View only for macOS.</li>
+				<br>
 				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/tvOS.swift">tvOS&lt;Content: View&gt;(_ modifier: (Self) -> Content) -> some View</a></code> : Executes a closure that allows to apply a ViewModifier on a View only for tvOS.</li>
+				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/tvOS.swift">tvOS&lt;T: ViewModifier&gt;(_ modifier: T) -> some View</a></code> : Applies a ViewModifier on a View only for tvOS.</li>
+				<br>
 				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/watchOS.swift">watchOS&lt;Content: View&gt;(_ modifier: (Self) -> Content) -> some View</a></code> : Executes a closure that allows to apply a ViewModifier on a View only for watchOS.</li>
+				<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/OS%20Modifiers/watchOS.swift">watchOS&lt;T: ViewModifier&gt;(_ modifier: T) -> some View</a></code> : Applies a ViewModifier on a View only for watchOS.</li>
 			</ul>
 		</details>
 		<li><code><a href="https://github.com/LucasAbijmil/LAComponents/blob/main/Sources/LAComponents/SwiftUI%20ViewModifiers/BackgroundColor.swift">backgroundColor(_ color: Color) -> some View</a></code> : A color considered as a View to use it as a background.</li>

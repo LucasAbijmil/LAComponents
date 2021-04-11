@@ -18,4 +18,17 @@ public extension View {
     return self
     #endif
   }
+
+  /// Applies a `ViewModifier` on a `View` only for tvOS.
+  ///
+  /// - Parameters:
+  ///   - modifier: A `ViewModifier` applied if the os is tvOS.
+  func tvOS<T: ViewModifier>(_ modifier: T) -> some View {
+    #if os(tvOS)
+    return self
+      .modifier(modifier)
+    #else
+    return self
+    #endif
+  }
 }
