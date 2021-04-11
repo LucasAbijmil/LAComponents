@@ -7,7 +7,7 @@ import SwiftUI
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public extension View {
 
-  /// Executes a closure depending on a `Binding<Bool>` to apply a `ViewModifier` on a `View`.
+  /// Execute a closure depending on a `Binding<Bool>` to apply a `modifier` on a `View`.
   ///
   /// - Parameters:
   ///   - condition: `Binding<Bool>`.
@@ -20,7 +20,7 @@ public extension View {
     }
   }
 
-  /// Executes a closure depending on a `Bool` to apply a `ViewModifier` on a `View`.
+  /// Execute a closure depending on a `Bool` to apply a `modifier` on a `View`.
   ///
   /// - Parameters:
   ///   - condition: `Bool`.
@@ -33,7 +33,7 @@ public extension View {
     }
   }
 
-  /// Executes one closure or another depending on a `Binding<Bool>` to apply a `ViewModifier` on a `View`.
+  /// Execute one closure or another depending on a `Binding<Bool>` to apply a `modifier` on a `View`.
   ///
   /// - Parameters:
   ///   - condition: `Binding<Bool>`.
@@ -47,7 +47,7 @@ public extension View {
     }
   }
 
-  /// Executes one closure or another depending on a `Bool` to apply a `ViewModifier` on a `View`.
+  /// Execute one closure or another depending on a `Bool` to apply a `modifier` on a `View`.
   ///
   /// - Parameters:
   ///   - condition: `Binding<Bool>`.
@@ -61,7 +61,7 @@ public extension View {
     }
   }
 
-  /// Applies a `ViewModifier` if the `Binding<Bool>` is set to true.
+  /// Apply a `ViewModifier` if the `Binding<Bool>` is set to true.
   ///
   /// - Parameters:
   ///   - condition: `Binding<Bool>`.
@@ -75,7 +75,7 @@ public extension View {
     }
   }
 
-  /// Applies a `ViewModifier` if the `Bool` is set to true.
+  /// Apply a `ViewModifier` if the `Bool` is set to true.
   ///
   /// - Parameters:
   ///   - condition : `Bool`.

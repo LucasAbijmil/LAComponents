@@ -7,7 +7,7 @@ import SwiftUI
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public extension View {
 
-  /// Executes a closure depending on a `Binding<T?>` to apply a `ViewModifier` on a `View`.
+  /// Execute a closure depending on a `Binding<T?>` to apply a `modifier` on a `View`.
   ///
   /// - Parameters:
   ///   - value: `Binding<T?>`.
@@ -20,7 +20,7 @@ public extension View {
     }
   }
 
-  /// Executes a closure depending on a `T?` to apply a `ViewModifier` on a `View`.
+  /// Execute a closure depending on a `T?` to apply a `modifier` on a `View`.
   ///
   /// - Parameters:
   ///   - value: `T?`.
@@ -33,7 +33,7 @@ public extension View {
     }
   }
 
-  /// Executes one closure or another depending on a `Binding<T?>` to apply a `ViewModifier` on a `View`.
+  /// Execute one closure or another depending on a `Binding<T?>` to apply a `modifier` on a `View`.
   ///
   /// - Parameters:
   ///   - value: `Binding<T?>`.
@@ -47,7 +47,7 @@ public extension View {
     }
   }
 
-  /// Executes one closure or another depending on a `T?` to apply a `ViewModifier` on a `View`.
+  /// Execute one closure or another depending on a `T?` to apply a `modifier` on a `View`.
   ///
   /// - Parameters:
   ///   - value: `T?`.
@@ -61,7 +61,7 @@ public extension View {
     }
   }
 
-  /// Applies a `ViewModifier` if the `Binding<T?>` is not nil.
+  /// Apply a `ViewModifier` if the `Binding<T?>` is not nil.
   ///
   /// - Parameters:
   ///   - value: `Binding<T?>`.
@@ -75,7 +75,7 @@ public extension View {
     }
   }
 
-  /// Applies a `ViewModifier` if the `T?` is not nil.
+  /// Apply a `ViewModifier` if the `T?` is not nil.
   ///
   /// - Parameters:
   ///   - value: `T?`.

@@ -7,7 +7,7 @@ import SwiftUI
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
 public extension View {
 
-  /// Executes a closure that allows to apply a `ViewModifier` on a `View` only for tvOS.
+  /// Execute a closure that allows to apply a `modifier` on a `View` only for tvOS.
   ///
   /// - Parameters:
   ///   - modifier: The transformation to be applied to the `View` passed as a parameter to the closure if the os is tvOS.
@@ -19,7 +19,7 @@ public extension View {
     #endif
   }
 
-  /// Applies a `ViewModifier` on a `View` only for tvOS.
+  /// Apply a `ViewModifier` on a `View` only for tvOS.
   ///
   /// - Parameters:
   ///   - modifier: A `ViewModifier` applied if the os is tvOS.

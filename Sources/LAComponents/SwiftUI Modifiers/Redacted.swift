@@ -26,7 +26,7 @@ public enum RedactionReasons {
   case overlay(color: Color)
 }
 
-/// A struct that applies the correct ViewModifier based on the RedactionReason.
+/// A struct that applies the correct redacted modifier based on the RedactionReason.
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 fileprivate struct Redacted: ViewModifier {
 
