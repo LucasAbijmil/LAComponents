@@ -25,8 +25,8 @@ public extension View {
 
       if isPresented.wrappedValue {
         HUD(content: content, onDismiss: onDismiss)
-          .transition(.asymmetric(insertion: AnyTransition.move(edge: .top).combined(with: .opacity),
-                                  removal: AnyTransition.offset(x: 0.0, y: -500)))
+          .transition(.asymmetric(insertion: .move(edge: .top).combined(with: .opacity),
+                                  removal: .offset(x: 0.0, y: -500)))
           .zIndex(999)
           .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + timer) {
@@ -52,8 +52,8 @@ public extension View {
 
       if let wrappedValue = item.wrappedValue {
         HUDItem(content: content, item: wrappedValue, onDismiss: onDismiss)
-          .transition(.asymmetric(insertion: AnyTransition.move(edge: .top).combined(with: .opacity),
-                                  removal: AnyTransition.offset(x: 0.0, y: -500)))
+          .transition(.asymmetric(insertion: .move(edge: .top).combined(with: .opacity),
+                                  removal: .offset(x: 0.0, y: -500)))
           .zIndex(999)
           .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + timer) {
@@ -72,14 +72,8 @@ public extension View {
 @available(watchOS, unavailable)
 fileprivate struct HUD<Content: View>: View {
 
-  let content: Content
+  @ViewBuilder let content: Content
   let onDismiss: (() -> Void)?
-
-  // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
-  init(@ViewBuilder content: @escaping () -> Content, onDismiss: (() -> Void)?) {
-    self.content = content()
-    self.onDismiss = onDismiss
-  }
 
   var body: some View {
     content
@@ -87,7 +81,7 @@ fileprivate struct HUD<Content: View>: View {
       .padding()
       .background(BlurView(style: .systemMaterial))
       .clipShape(Capsule())
-      .shadow(color: Color.black.opacity(0.20), radius: 20, x: 0, y: 5)
+      .shadow(color: .black.opacity(0.20), radius: 20, x: 0, y: 5)
       .animation(.default)
       .onDisappear(perform: onDismiss)
   }
@@ -103,7 +97,6 @@ fileprivate struct HUDItem<Item: Identifiable, Content: View>: View {
   let content: Content
   let onDismiss: (() -> Void)?
 
-  // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
   init(@ViewBuilder content: @escaping (Item) -> Content, item: Item, onDismiss: (() -> Void)?) {
     self.content = content(item)
     self.onDismiss = onDismiss
@@ -115,7 +108,7 @@ fileprivate struct HUDItem<Item: Identifiable, Content: View>: View {
       .padding()
       .background(BlurView(style: .systemMaterial))
       .clipShape(Capsule())
-      .shadow(color: Color.black.opacity(0.20), radius: 20, x: 0, y: 5)
+      .shadow(color: .black.opacity(0.20), radius: 20, x: 0, y: 5)
       .animation(.default)
       .onDisappear(perform: onDismiss)
   }

@@ -24,7 +24,7 @@ public extension View {
 
       if isPresented.wrappedValue {
         Dialog(content: content, backgroundColor: backgroundColor, onDismiss: onDismiss) { withAnimation { isPresented.wrappedValue = false } }
-          .transition(AnyTransition.move(edge: .bottom).combined(with: .opacity))
+          .transition(.move(edge: .bottom).combined(with: .opacity))
           .zIndex(999)
       }
     }
@@ -44,7 +44,7 @@ public extension View {
 
       if let wrappedValue = item.wrappedValue {
         DialogItem(content: content, item: wrappedValue, backgroundColor: backgroundColor, onDismiss: onDismiss) { withAnimation { item.wrappedValue = nil } }
-          .transition(AnyTransition.move(edge: .bottom).combined(with: .opacity))
+          .transition(.move(edge: .bottom).combined(with: .opacity))
           .zIndex(999)
       }
     }
@@ -65,7 +65,6 @@ fileprivate struct Dialog<Content: View>: View {
   let onDismiss: (() -> Void)?
   let closeAction: () -> Void
 
-  // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
   init(@ViewBuilder content: @escaping () -> Content, backgroundColor: Color, onDismiss: (() -> Void)? = nil, dismissAction: @escaping () -> Void) {
     self.content = content()
     self.backgroundColor = backgroundColor
@@ -89,7 +88,7 @@ fileprivate struct Dialog<Content: View>: View {
           .frame(maxWidth: .infinity, maxHeight: .infinity)
           .padding(.horizontal, currentDevice.isIpad ? 0 : verticalSizeClass == .regular ? 16 : 0)
           .padding(.vertical, currentDevice.isIpad ? 0 : verticalSizeClass == .compact ? 16 : 0)
-          .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 20)
+          .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 20)
           .gesture(
             DragGesture()
               .onEnded {
@@ -118,7 +117,6 @@ fileprivate struct DialogItem<Item: Identifiable, Content: View>: View {
   let onDismiss: (() -> Void)?
   let closeAction: () -> Void
 
-  // TODO : Remove me in 5.4 and add @ViewBuilder before let content: Content
   init(@ViewBuilder content: @escaping (Item) -> Content, item: Item, backgroundColor: Color, onDismiss: (() -> Void)? = nil, dismissAction: @escaping () -> Void) {
     self.content = content(item)
     self.backgroundColor = backgroundColor
@@ -142,7 +140,7 @@ fileprivate struct DialogItem<Item: Identifiable, Content: View>: View {
           .frame(maxWidth: .infinity, maxHeight: .infinity)
           .padding(.horizontal, currentDevice.isIpad ? 0 : verticalSizeClass == .regular ? 16 : 0)
           .padding(.vertical, currentDevice.isIpad ? 0 : verticalSizeClass == .compact ? 16 : 0)
-          .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 20)
+          .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 20)
           .gesture(
             DragGesture()
               .onEnded {
