@@ -15,14 +15,4 @@ public extension View {
     self
       .background(color)
   }
-
-  /// A color with an opacity considered as a `View` to use it as a background.
-  ///
-  /// - Parameters:
-  ///   - color: The color used as a background.
-  ///   - opacity: An opacity between 0 and 1.
-  func backgroundColor(_ color: Color, at opacity: Double) -> some View {
-    self
-      .background(color.opacity(opacity))
-  }
 }
